@@ -1,6 +1,7 @@
 {
   "name": "capstone-project",
   "version": "0.1.0",
+  "author": "Christian Zintel <c.zintel@yahoo.de>",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.13.0",
