@@ -2,16 +2,18 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 import GlobalStyle from '../GlobalStyle'
 
-Card.propTypes = {
+emotionsCard.propTypes = {
   isExpanded: PropTypes.bool,
-  onClick: PropTypes.func.isRequired,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  tags: PropTypes.string,
 }
 
-export default function Card({ name, description, tags }) {
+export default function emotionsCard({ name, description, tags }) {
   return (
     <>
       <GlobalStyle />
-      <EmotionsCard>
+      <Card>
         <h2>{name}</h2>
         <span>
           Was ist {name}? {description}
@@ -23,12 +25,12 @@ export default function Card({ name, description, tags }) {
           <li>{tags[3]}</li>
         </ul>
         <ButtonExpansion>+</ButtonExpansion>
-      </EmotionsCard>
+      </Card>
     </>
   )
 }
 
-const EmotionsCard = styled.div`
+const Card = styled.div`
   display: grid;
   gap: 15px;
   width: 42.5%;
@@ -49,7 +51,7 @@ const EmotionsCard = styled.div`
     flex-wrap: wrap;
     gap: 15px;
     list-style-type: none;
-    justify-content: space-space-evenly;
+    justify-content: space-evenly;
     text-align: left;
     padding-left: 0;
 
