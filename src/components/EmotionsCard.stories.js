@@ -11,7 +11,8 @@ const Template = args => <EmotionsCard {...args} />
 export const DefaultEmotionscard = Template.bind({})
 DefaultEmotionscard.args = {
   isExpanded: false,
-  name: 'Gefühlsname',
+  name: 'Freude',
   description:
-    'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+    'Freude ist der Gemütszustand oder die primäre Emotion, die als Reaktion auf eine angenehme Situation oder die Erinnerung an eine solche entsteht. Je nach Intensität äußert sie sich als Lächeln, Lachen, Freudenschrei oder in einem Handeln. Im weiteren Sinne kann auch der Auslöser einer Freude, eine frohe Stimmung oder ein frohes Dasein als Freude bezeichnet werden. Der Begriff Glück wird manchmal im Sinne von Freude verwendet.',
+  tags: ['fröhlich', 'lachen', 'glücklich', 'happy'],
 }

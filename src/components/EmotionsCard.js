@@ -6,7 +6,7 @@ Card.propTypes = {
   onClick: PropTypes.func.isRequired,
 }
 
-export default function Card({ name, description }) {
+export default function Card({ name, description, tags }) {
   return (
     <EmotionsCard>
       <h2>{name}</h2>
@@ -14,10 +14,10 @@ export default function Card({ name, description }) {
         Was ist {name}? {description}
       </span>
       <ul>
-        <li>association1</li>
-        <li>association2</li>
-        <li>association3</li>
-        <li>association4</li>
+        <li>{tags[0]}</li>
+        <li>{tags[1]}</li>
+        <li>{tags[2]}</li>
+        <li>{tags[3]}</li>
       </ul>
       <ButtonExpansion>+</ButtonExpansion>
     </EmotionsCard>
@@ -47,7 +47,7 @@ const EmotionsCard = styled.div`
     padding-left: 0;
 
     li {
-      padding: 3px;
+      padding: 3px 8px;
       border-radius: 3px;
       background-color: white;
       color: black;
