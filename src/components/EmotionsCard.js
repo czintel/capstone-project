@@ -9,10 +9,16 @@ Card.propTypes = {
 export default function Card({ name, description }) {
   return (
     <EmotionsCard>
-      <Title>{name}</Title>
+      <h2>{name}</h2>
       <span>
         Was ist {name}? {description}
       </span>
+      <ul>
+        <li>association1</li>
+        <li>association2</li>
+        <li>association3</li>
+        <li>association4</li>
+      </ul>
       <ButtonExpansion>+</ButtonExpansion>
     </EmotionsCard>
   )
@@ -20,21 +26,39 @@ export default function Card({ name, description }) {
 
 const EmotionsCard = styled.div`
   display: grid;
-  gap: 20px;
+  gap: 15px;
   width: 42.5%;
   padding: 40px;
   border: none;
-  background-color: lightgray;
+  background-color: darkgray;
+  color: white;
   border-radius: 30px;
-`
 
-const Title = styled.h2`
-  font-size: 30px;
-  line-height: 1;
+  h2 {
+    font-size: 30px;
+    line-height: 1;
+    margin: 0;
+  }
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding-left: 0;
+
+    li {
+      padding: 3px;
+      border-radius: 3px;
+      background-color: white;
+      color: black;
+    }
+  }
 `
 const ButtonExpansion = styled.button`
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 20px;
   border-radius: 50%;
   justify-self: right;
   text-align: center;
