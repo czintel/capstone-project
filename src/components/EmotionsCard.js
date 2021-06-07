@@ -4,32 +4,41 @@ import styled from 'styled-components/macro'
 Card.propTypes = {
   isExpanded: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
-  emotions: PropTypes.arrayOf(
-    PropTypes.shape({
-      nameOfEmotion: PropTypes.string,
-      descriptionOfEmotion: PropTypes.string,
-      colorOfEmotion: PropTypes.string,
-      infoTagsOfEmotion: PropTypes.string,
-    })
-  ),
 }
 
-export default function Card({ emotions }) {
+export default function Card({ name, description }) {
   return (
     <EmotionsCard>
-      <Title>{emotions.map(emotion => emotion.nameOfEmotion)}</Title>
+      <Title>{name}</Title>
+      <span>
+        Was ist {name}? {description}
+      </span>
+      <ButtonExpansion>+</ButtonExpansion>
     </EmotionsCard>
   )
 }
 
 const EmotionsCard = styled.div`
-  width: 42, 5%;
   display: grid;
-  padding: 20px;
+  gap: 20px;
+  width: 42.5%;
+  padding: 40px;
   border: none;
   background-color: lightgray;
-  border-radius: 5px;
+  border-radius: 30px;
 `
+
 const Title = styled.h2`
-  font-size: 1em;
+  font-size: 30px;
+  line-height: 1;
+`
+const ButtonExpansion = styled.button`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  justify-self: right;
+  text-align: center;
+  border: none;
+  background-color: white;
+  color: black;
 `
