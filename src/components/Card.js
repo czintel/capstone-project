@@ -48,18 +48,20 @@ export default function CardTemplate({ name, description, tags, color }) {
 const Card = styled.div`
   display: grid;
   gap: 20px;
-  width: ${prop => (prop.isExpanded ? '100%' : 'fit-content')};
-  min-width: 158px;
+  width: ${prop => (prop.isExpanded ? '100%' : '155px')};
+  height: ${prop => (prop.isExpanded ? '100%' : '155px')};
+  min-width: 155px;
   max-width: 600px;
-  padding: ${prop => (prop.isExpanded ? '40px' : '20px')};
+  padding: ${prop => (prop.isExpanded ? '40px' : '40px 20px')};
   border: none;
   color: white;
   border-radius: 30px;
   background-color: ${prop => prop.backgroundColor};
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 
   h2 {
     font-size: ${prop => (prop.isExpanded ? '50px' : '30px')};
-    text-align: ${prop => (prop.isExpanded ? 'left' : 'center')};
+    text-align: center;
     line-height: 1;
     margin: 0;
   }
