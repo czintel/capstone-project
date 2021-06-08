@@ -4,21 +4,22 @@ import GlobalStyle from '../GlobalStyle'
 import ButtonExpansion from './ButtonExpansion'
 import { useState } from 'react'
 
-EmotionsCard.propTypes = {
+CardTemplate.propTypes = {
   isExpanded: PropTypes.bool,
   name: PropTypes.string,
   description: PropTypes.string,
   tags: PropTypes.string,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
+  color: PropTypes.string,
 }
 
-export default function EmotionsCard({ name, description, tags }) {
+export default function CardTemplate({ name, description, tags, color }) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
     <>
       <GlobalStyle />
-      <Card>
+      <Card isExpanded={isExpanded} backgroundColor={color}>
         <h2>{name}</h2>
         {isExpanded && (
           <>
@@ -33,7 +34,10 @@ export default function EmotionsCard({ name, description, tags }) {
             </ul>
           </>
         )}
-        <ButtonExpansion onClick={() => setIsExpanded(!isExpanded)}>
+        <ButtonExpansion
+          isExpanded={isExpanded}
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
           {isExpanded ? '-' : '+'}
         </ButtonExpansion>
       </Card>
@@ -44,15 +48,16 @@ export default function EmotionsCard({ name, description, tags }) {
 const Card = styled.div`
   display: grid;
   gap: 20px;
-  width: 42.5%;
+  width: ${prop => (prop.isExpanded ? '100%' : '150px')};
+  min-width: 158px;
+  max-width: 600px;
   padding: 40px;
   border: none;
-  background-color: darkgray;
   color: white;
   border-radius: 30px;
 
   h2 {
-    font-size: 30px;
+    font-size: ${prop => (prop.isExpanded ? '30px' : '20px')};
     line-height: 1;
     margin: 0;
   }
