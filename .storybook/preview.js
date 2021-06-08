@@ -1,4 +1,4 @@
 export const parameters = {
-  layout: 'centered',
+  layout: 'fullscreen',
   actions: { argTypesRegex: '^on[A-Z].*' },
 }

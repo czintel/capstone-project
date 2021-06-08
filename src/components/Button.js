@@ -2,12 +2,16 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 
 RegButton.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   children: PropTypes.node,
 }
 
-export default function RegButton({ children, ...props }) {
-  return <Button {...props}>{children}</Button>
+export default function RegButton({ onClick, children, ...props }) {
+  return (
+    <Button onClick={onClick} {...props}>
+      {children}
+    </Button>
+  )
 }
 
 const Button = styled.button`
@@ -20,6 +24,6 @@ const Button = styled.button`
   text-align: center;
   border: none;
   background-color: lightgray;
-  color: gray;
+  color: white;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 `

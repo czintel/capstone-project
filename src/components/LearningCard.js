@@ -5,7 +5,7 @@ import ButtonExpansion from './ButtonExpansion'
 import { useState } from 'react'
 
 Card.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   isExpanded: PropTypes.bool,
   name: PropTypes.string,
   description: PropTypes.string,
@@ -13,7 +13,7 @@ Card.propTypes = {
   color: PropTypes.string,
 }
 
-export default function Card({ name, description, tags, color }) {
+export default function Card({ onClick, name, description, tags, color }) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
