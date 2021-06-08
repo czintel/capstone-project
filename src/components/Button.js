@@ -18,12 +18,12 @@ const Button = styled.button`
   width: fit-content;
   height: auto;
   padding: 10px 15px;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 20px;
   border-radius: 15px;
   justify-self: end;
   border: none;
   background-color: darkgray;
   color: white;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 `

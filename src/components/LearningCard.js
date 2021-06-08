@@ -66,10 +66,16 @@ const LearningCard = styled.div`
     margin: 0;
   }
 
+  span {
+    font-size: 17px;
+  }
+
   ul {
+    font-size: 14px;
+    justify-content: left;
     display: inline-flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
     list-style-type: none;
     justify-content: space-evenly;
     text-align: left;
