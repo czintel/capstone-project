@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 import LearningCard from '../components/LearningCard'
-import Button from '../components/Button'
+import ButtonRight from '../components/ButtonRight'
 
 LearningCardList.propTypes = {
   emotions: PropTypes.array,
@@ -10,7 +10,7 @@ LearningCardList.propTypes = {
 export default function LearningCardList({ emotions }) {
   return (
     <PageWrapper>
-      <Button>Quiz</Button>
+      <ButtonRight>Quiz &gt;</ButtonRight>
       <CardWrapper>
         {emotions.map(({ name, description, tags, color, id }) => (
           <LearningCard
@@ -27,14 +27,16 @@ export default function LearningCardList({ emotions }) {
 }
 
 const PageWrapper = styled.section`
-  display: block;
+  display: grid;
+  gap: 20px;
+  padding: 20px;
 `
 
 const CardWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
   gap: 20px;
-  padding: 20px;
   margin: 0;
 `

@@ -6,22 +6,22 @@ import { useState } from 'react'
 
 Card.propTypes = {
   onClick: PropTypes.func,
-  isExpanded: PropTypes.bool,
+  isAusgeklappt: PropTypes.bool,
   name: PropTypes.string,
   description: PropTypes.string,
-  tags: PropTypes.string,
+  tags: PropTypes.array,
   color: PropTypes.string,
 }
 
-export default function Card({ onClick, name, description, tags, color }) {
-  const [isExpanded, setIsExpanded] = useState(false)
+export default function Card({ name, description, tags, color }) {
+  const [isAusgeklappt, setIsExpanded] = useState(false)
 
   return (
     <>
       <GlobalStyle />
-      <LearningCard isExpanded={isExpanded} backgroundColor={color}>
-        <h2 isExpanded={isExpanded}>{name}</h2>
-        {isExpanded && (
+      <LearningCard isAusgeklappt={isAusgeklappt} backgroundColor={color}>
+        <h2 isAusgeklappt={isAusgeklappt}>{name}</h2>
+        {isAusgeklappt && (
           <>
             <span>
               Was ist {name}? {description}
@@ -35,10 +35,10 @@ export default function Card({ onClick, name, description, tags, color }) {
           </>
         )}
         <ButtonExpansion
-          isExpanded={isExpanded}
-          onClick={() => setIsExpanded(!isExpanded)}
+          isAusgeklappt={isAusgeklappt}
+          onClick={() => setIsExpanded(!isAusgeklappt)}
         >
-          {isExpanded ? '-' : '+'}
+          {isAusgeklappt ? '-' : '+'}
         </ButtonExpansion>
       </LearningCard>
     </>
@@ -48,11 +48,11 @@ export default function Card({ onClick, name, description, tags, color }) {
 const LearningCard = styled.div`
   display: grid;
   gap: 20px;
-  width: ${prop => (prop.isExpanded ? '100%' : '155px')};
-  height: ${prop => (prop.isExpanded ? '100%' : '155px')};
+  width: ${prop => (prop.isAusgeklappt ? '100%' : '155px')};
+  height: ${prop => (prop.isAusgeklappt ? '100%' : '155px')};
   min-width: 155px;
   max-width: 600px;
-  padding: ${prop => (prop.isExpanded ? '40px' : '40px 20px')};
+  padding: ${prop => (prop.isAusgeklappt ? '40px' : '40px 20px')};
   border: none;
   color: white;
   border-radius: 30px;
@@ -60,7 +60,7 @@ const LearningCard = styled.div`
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 
   h2 {
-    font-size: ${prop => (prop.isExpanded ? '50px' : '30px')};
+    font-size: ${prop => (prop.isAusgeklappt ? '50px' : '30px')};
     text-align: center;
     line-height: 1;
     margin: 0;

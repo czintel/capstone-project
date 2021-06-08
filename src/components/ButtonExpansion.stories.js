@@ -11,11 +11,11 @@ const Template = args => <ButtonExpansion {...args} />
 export const DefaultButtonExpansion = Template.bind({})
 DefaultButtonExpansion.args = {
   children: '+',
-  isExpanded: false,
+  isAusgeklappt: false,
 }
 
 export const ExpandedButtonExpansion = Template.bind({})
 ExpandedButtonExpansion.args = {
   children: '-',
-  isExpanded: true,
+  isAusgeklappt: true,
 }

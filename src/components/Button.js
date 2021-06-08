@@ -17,13 +17,13 @@ export default function RegButton({ onClick, children, ...props }) {
 const Button = styled.button`
   width: fit-content;
   height: auto;
+  padding: 10px 15px;
   font-weight: 400;
   font-size: 20px;
-  border-radius: 50%;
-  justify-self: center;
-  text-align: center;
+  border-radius: 15px;
+  justify-self: end;
   border: none;
-  background-color: lightgray;
+  background-color: darkgray;
   color: white;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 `
