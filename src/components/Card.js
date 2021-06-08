@@ -20,7 +20,7 @@ export default function CardTemplate({ name, description, tags, color }) {
     <>
       <GlobalStyle />
       <Card isExpanded={isExpanded} backgroundColor={color}>
-        <h2>{name}</h2>
+        <h2 isExpanded={isExpanded}>{name}</h2>
         {isExpanded && (
           <>
             <span>
@@ -48,16 +48,18 @@ export default function CardTemplate({ name, description, tags, color }) {
 const Card = styled.div`
   display: grid;
   gap: 20px;
-  width: ${prop => (prop.isExpanded ? '100%' : '150px')};
+  width: ${prop => (prop.isExpanded ? '100%' : 'fit-content')};
   min-width: 158px;
   max-width: 600px;
-  padding: 40px;
+  padding: ${prop => (prop.isExpanded ? '40px' : '20px')};
   border: none;
   color: white;
   border-radius: 30px;
+  background-color: ${prop => prop.backgroundColor};
 
   h2 {
-    font-size: ${prop => (prop.isExpanded ? '30px' : '20px')};
+    font-size: ${prop => (prop.isExpanded ? '50px' : '30px')};
+    text-align: ${prop => (prop.isExpanded ? 'left' : 'center')};
     line-height: 1;
     margin: 0;
   }
@@ -75,7 +77,7 @@ const Card = styled.div`
       padding: 3px 8px;
       border-radius: 10px;
       background-color: white;
-      color: black;
+      color: gray;
     }
   }
 `

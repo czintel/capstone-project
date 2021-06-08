@@ -1,37 +1,37 @@
 [
   {
     "name": "Freude",
-    "description": "Freude ist der Gemütszustand oder die primäre Emotion, die als Reaktion auf eine angenehme Situation oder die Erinnerung an eine solche entsteht. Je nach Intensität äußert sie sich als Lächeln, Lachen, Freudenschrei oder in einem Handeln. Im weiteren Sinne kann auch der Auslöser einer Freude, eine frohe Stimmung oder ein frohes Dasein als Freude bezeichnet werden. Der Begriff Glück wird manchmal im Sinne von Freude verwendet.",
-    "tags": ["fröhlich", "lachen", "glücklich", "happy"],
-    "color": "#F6E683",
+    "description": "Freude ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    "tags": ["fröhlich", "lachen", "Glück", "happy"],
+    "color": "#FDDD5C",
     "id": 1
   },
   {
     "name": "Angst",
-    "description": "Freude ist der Gemütszustand oder die primäre Emotion, die als Reaktion auf eine angenehme Situation oder die Erinnerung an eine solche entsteht. Je nach Intensität äußert sie sich als Lächeln, Lachen, Freudenschrei oder in einem Handeln. Im weiteren Sinne kann auch der Auslöser einer Freude, eine frohe Stimmung oder ein frohes Dasein als Freude bezeichnet werden. Der Begriff Glück wird manchmal im Sinne von Freude verwendet.",
-    "tags": ["fröhlich", "lachen", "glücklich", "happy"],
+    "description": "Angst ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    "tags": ["ängstlich", "Schreck", "zittern", "Furcht"],
     "color": "#A484E9",
     "id": 2
   },
   {
     "name": "Wut",
-    "description": "Freude ist der Gemütszustand oder die primäre Emotion, die als Reaktion auf eine angenehme Situation oder die Erinnerung an eine solche entsteht. Je nach Intensität äußert sie sich als Lächeln, Lachen, Freudenschrei oder in einem Handeln. Im weiteren Sinne kann auch der Auslöser einer Freude, eine frohe Stimmung oder ein frohes Dasein als Freude bezeichnet werden. Der Begriff Glück wird manchmal im Sinne von Freude verwendet.",
-    "tags": ["fröhlich", "lachen", "glücklich", "happy"],
+    "description": "Wut ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    "tags": ["sauer", "Wutanfall", "aggressiv", "rasend"],
     "color": "#F4889A",
     "id": 3
   },
   {
     "name": "Kummer",
-    "description": "Freude ist der Gemütszustand oder die primäre Emotion, die als Reaktion auf eine angenehme Situation oder die Erinnerung an eine solche entsteht. Je nach Intensität äußert sie sich als Lächeln, Lachen, Freudenschrei oder in einem Handeln. Im weiteren Sinne kann auch der Auslöser einer Freude, eine frohe Stimmung oder ein frohes Dasein als Freude bezeichnet werden. Der Begriff Glück wird manchmal im Sinne von Freude verwendet.",
-    "tags": ["fröhlich", "lachen", "glücklich", "happy"],
+    "description": "Kummer ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    "tags": ["traurig", "Tränen", "weinen", "Schmerz"],
     "color": "#31BFF3",
     "id": 4
   },
   {
     "name": "Ekel",
     "category": "positive",
-    "description": "Freude ist der Gemütszustand oder die primäre Emotion, die als Reaktion auf eine angenehme Situation oder die Erinnerung an eine solche entsteht. Je nach Intensität äußert sie sich als Lächeln, Lachen, Freudenschrei oder in einem Handeln. Im weiteren Sinne kann auch der Auslöser einer Freude, eine frohe Stimmung oder ein frohes Dasein als Freude bezeichnet werden. Der Begriff Glück wird manchmal im Sinne von Freude verwendet.",
-    "tags": ["fröhlich", "lachen", "glücklich", "happy"],
+    "description": "Ekel ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    "tags": ["ekelhaft", "angewidert", "abstoßend", "Empörung"],
     "color": "#79D45E",
     "id": 5
   }

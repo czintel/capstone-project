@@ -12,8 +12,8 @@ export default function Button({ children, ...props }) {
 }
 
 const ButtonExpansion = styled.button`
-  width: ${prop => (prop.isExpanded ? '50px' : '30px')};
-  height: ${prop => (prop.isExpanded ? '50px' : '30px')};
+  width: ${prop => (prop.isExpanded ? '50px' : '40px')};
+  height: ${prop => (prop.isExpanded ? '50px' : '40px')};
   font-weight: 700;
   font-size: 20px;
   border-radius: 50%;
@@ -21,5 +21,5 @@ const ButtonExpansion = styled.button`
   text-align: center;
   border: none;
   background-color: white;
-  color: black;
+  color: gray;
 `
