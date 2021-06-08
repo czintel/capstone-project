@@ -5,11 +5,11 @@ import ButtonExpansion from './ButtonExpansion'
 import { useState } from 'react'
 
 CardTemplate.propTypes = {
+  onClick: PropTypes.func.isRequired,
   isExpanded: PropTypes.bool,
   name: PropTypes.string,
   description: PropTypes.string,
   tags: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
   color: PropTypes.string,
 }
 
