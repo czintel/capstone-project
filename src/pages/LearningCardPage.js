@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 import LearningCard from '../components/LearningCard'
-import ButtonRight from '../components/ButtonRight'
+import Button from '../components/Button'
 
 LearningCardList.propTypes = {
   emotions: PropTypes.array,
@@ -10,7 +10,7 @@ LearningCardList.propTypes = {
 export default function LearningCardList({ emotions }) {
   return (
     <PageWrapper>
-      <ButtonRight>Quiz &gt;</ButtonRight>
+      <Button>Quiz &gt;</Button>
       <CardWrapper>
         {emotions.map(({ name, description, tags, color, id }) => (
           <LearningCard
