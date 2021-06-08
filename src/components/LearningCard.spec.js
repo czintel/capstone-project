@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
-import Card from './Card'
+import LearningCard from './LearningCard'
 
 describe('Card', () => {
   it('renders', () => {
     render(
-      <Card
+      <LearningCard
         name="Name of the emotion"
         description="Description of the Emotion"
         tags="Tag of the emotion"

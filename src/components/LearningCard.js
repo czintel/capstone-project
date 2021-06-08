@@ -4,7 +4,7 @@ import GlobalStyle from '../GlobalStyle'
 import ButtonExpansion from './ButtonExpansion'
 import { useState } from 'react'
 
-CardTemplate.propTypes = {
+Card.propTypes = {
   onClick: PropTypes.func.isRequired,
   isExpanded: PropTypes.bool,
   name: PropTypes.string,
@@ -13,13 +13,13 @@ CardTemplate.propTypes = {
   color: PropTypes.string,
 }
 
-export default function CardTemplate({ name, description, tags, color }) {
+export default function Card({ name, description, tags, color }) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
     <>
       <GlobalStyle />
-      <Card isExpanded={isExpanded} backgroundColor={color}>
+      <LearningCard isExpanded={isExpanded} backgroundColor={color}>
         <h2 isExpanded={isExpanded}>{name}</h2>
         {isExpanded && (
           <>
@@ -40,12 +40,12 @@ export default function CardTemplate({ name, description, tags, color }) {
         >
           {isExpanded ? '-' : '+'}
         </ButtonExpansion>
-      </Card>
+      </LearningCard>
     </>
   )
 }
 
-const Card = styled.div`
+const LearningCard = styled.div`
   display: grid;
   gap: 20px;
   width: ${prop => (prop.isExpanded ? '100%' : '155px')};
