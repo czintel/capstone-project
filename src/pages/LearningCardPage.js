@@ -27,4 +27,5 @@ const PageWrapper = styled.section`
   flex-wrap: wrap;
   width: 100%;
   gap: 20px;
+  padding: 20px;
 `
