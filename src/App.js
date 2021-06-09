@@ -13,7 +13,5 @@ function App() {
 export default App
 
 const AppWrapper = styled.section`
-  background: #f6f6eb;
-  height: 100vh;
-  width: 100vw;
+  justify-content: center;
 `
