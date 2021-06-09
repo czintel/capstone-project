@@ -1,20 +1,20 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 
-RegButton.propTypes = {
+Button.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.node,
 }
 
-export default function RegButton({ onClick, children, ...props }) {
+export default function Button({ onClick, children, ...props }) {
   return (
-    <Button onClick={onClick} {...props}>
+    <StyledButton onClick={onClick} {...props}>
       {children}
-    </Button>
+    </StyledButton>
   )
 }
 
-const Button = styled.button`
+const StyledButton = styled.button`
   width: fit-content;
   height: auto;
   padding: 10px 15px;
