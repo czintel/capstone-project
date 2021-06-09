@@ -27,16 +27,16 @@ export default function LearningCardList({ emotions }) {
 }
 
 const PageWrapper = styled.section`
-  display: grid;
+  display: flexbox;
+  flex-wrap: wrap;
+  margin: auto;
   gap: 20px;
   padding: 20px;
 `
 
 const CardWrapper = styled.section`
-  display: flex;
+  display: flexbox;
   flex-wrap: wrap;
-  justify-content: space-between;
   width: 100%;
   gap: 20px;
-  margin: 0;
 `

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
-import GlobalStyle from '../GlobalStyle'
 import ButtonExpansion from './ButtonExpansion'
 import { useState } from 'react'
 
@@ -18,7 +17,6 @@ export default function Card({ name, description, tags, color }) {
 
   return (
     <>
-      <GlobalStyle />
       <LearningCard isExpanded={isExpanded} backgroundColor={color}>
         <h2 isExpanded={isExpanded}>{name}</h2>
         {isExpanded && (
