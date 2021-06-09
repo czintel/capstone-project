@@ -8,19 +8,28 @@ Button.propTypes = {
 }
 
 export default function Button({ children, ...props }) {
-  return <ButtonExpansion {...props}>{children}</ButtonExpansion>
+  return (
+    <ButtonExpansion {...props}>
+      <ChildWrapper>{children}</ChildWrapper>
+    </ButtonExpansion>
+  )
 }
 
 const ButtonExpansion = styled.button`
+  position: relative;
   width: ${prop => (prop.isExpanded ? '50px' : '40px')};
   height: ${prop => (prop.isExpanded ? '50px' : '40px')};
   font-weight: 700;
   font-size: 20px;
   border-radius: 50%;
-  justify-self: center;
-  text-align: center;
   border: none;
   background-color: white;
   color: gray;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  justify-self: center;
+`
+const ChildWrapper = styled.span`
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 `
