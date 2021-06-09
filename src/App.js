@@ -13,7 +13,7 @@ function App() {
 export default App
 
 const AppWrapper = styled.section`
-  background-color: #f6f6eb;
+  background: #f6f6eb;
   height: 100vh;
   width: 100vw;
 `

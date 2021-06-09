@@ -25,10 +25,9 @@ export default function Card({ name, description, tags, color }) {
               Was ist {name}? {description}
             </span>
             <ul>
-              <li>{tags[0]}</li>
-              <li>{tags[1]}</li>
-              <li>{tags[2]}</li>
-              <li>{tags[3]}</li>
+              {tags.map(tag => (
+                <li key={tag}>{tag}</li>
+              ))}
             </ul>
           </>
         )}
