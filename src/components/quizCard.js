@@ -24,11 +24,11 @@ export default function QuizCardContent({
 
   return (
     <QuizCard isAnswered={isAnswered}>
-      <h3>{title}</h3>
-      <p>{scenario}</p>
-      <h3>{question}</h3>
+      <h3>{title}Stell dir vor...</h3>
+      <p>{scenario}...du wärst ein Affe.</p>
+      <h3>{question}Wie fühlst du dich?</h3>
       <ul>
-        <li isCorrect={isCorrect}>{answers}</li>
+        <li isCorrect={isCorrect}>{answers}Traurig</li>
       </ul>
       <button onClick={onClick}>beantworten</button>
     </QuizCard>
