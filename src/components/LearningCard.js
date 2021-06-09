@@ -70,7 +70,7 @@ const LearningCard = styled.div`
   ul {
     padding: 0 10px;
     font-size: 14px;
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     gap: 10px;
     list-style-type: none;
