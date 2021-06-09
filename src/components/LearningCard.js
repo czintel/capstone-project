@@ -68,15 +68,13 @@ const LearningCard = styled.div`
   }
 
   ul {
+    padding: 0 10px;
     font-size: 14px;
-    justify-content: left;
     display: inline-flex;
     flex-wrap: wrap;
     gap: 10px;
     list-style-type: none;
-    justify-content: space-evenly;
-    text-align: left;
-    padding-left: 0;
+    justify-content: left;
 
     li {
       padding: 3px 8px;
