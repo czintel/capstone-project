@@ -23,12 +23,15 @@ export default function LearningCardList({ emotions }) {
 }
 
 const PageWrapper = styled.section`
+  height: 100vh;
   scroll-behavior: auto;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   max-width: 370px;
-  margin: auto;
+  align-content: center;
+  justify-content: flex-start;
+  margin: 0 auto;
   gap: 20px;
   padding: 20px;
 `
