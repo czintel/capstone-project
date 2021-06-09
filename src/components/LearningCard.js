@@ -49,7 +49,7 @@ const LearningCard = styled.div`
   width: ${prop => (prop.isExpanded ? '100%' : '155px')};
   height: ${prop => (prop.isExpanded ? 'auto' : '155px')};
   min-width: 155px;
-  max-width: 600px;
+  max-width: 680px;
   padding: ${prop => (prop.isExpanded ? '35px' : '35px 20px')};
   border: none;
   color: white;

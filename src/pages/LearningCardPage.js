@@ -23,7 +23,7 @@ export default function LearningCardList({ emotions }) {
 }
 
 const PageWrapper = styled.section`
-  display: flexbox;
+  display: flex;
   flex-wrap: wrap;
   width: 100%;
   margin: auto;
