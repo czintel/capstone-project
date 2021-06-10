@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 import { useState } from 'react'
 
-QuizCardContent.propTypes = {
+QuizCard.propTypes = {
   onClick: PropTypes.func,
   isAnswered: PropTypes.bool,
   isCorrect: PropTypes.bool,
@@ -12,29 +12,36 @@ QuizCardContent.propTypes = {
   answers: PropTypes.array,
 }
 
-export default function QuizCardContent({
+export default function QuizCard({
   title,
   scenario,
   question,
   answers,
-  onClick,
+  isCorrect,
 }) {
   const [isAnswered, setIsAnswered] = useState(false)
-  const [isCorrect, setIsCorrect] = useState(false)
 
   return (
-    <QuizCard isAnswered={isAnswered}>
-      <h3>{title}Stell dir vor...</h3>
-      <p>{scenario}...du wärst ein Affe.</p>
-      <h3>{question}Wie fühlst du dich?</h3>
+    <Card isAnswered={isAnswered}>
+      <h3>{title}</h3>
+      <p>{scenario}</p>
+      <h3>{question}</h3>
       <ul>
-        <li isCorrect={isCorrect}>{answers}Traurig</li>
+        {answers.map(answer => (
+          <li key={answer} isCorrect={isCorrect}>
+            {answer}
+          </li>
+        ))}
       </ul>
-      <button onClick={onClick}>beantworten</button>
-    </QuizCard>
+      <button
+        onClick={() => setIsAnswered(isCorrect ? !isAnswered : isAnswered)}
+      >
+        beantworten
+      </button>
+    </Card>
   )
 }
 
-const QuizCard = styled.div`
+const Card = styled.div`
   padding: 20px;
 `
