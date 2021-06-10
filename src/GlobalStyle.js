@@ -4,6 +4,8 @@ export default createGlobalStyle`
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    margin: 0;
+
   }
  
   body {

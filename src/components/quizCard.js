@@ -7,6 +7,7 @@ QuizCard.propTypes = {
   onClick: PropTypes.func,
   isAnswered: PropTypes.bool,
   isCorrect: PropTypes.bool,
+  isActive: PropTypes.bool,
   title: PropTypes.string,
   scenario: PropTypes.string,
   question: PropTypes.string,
@@ -19,6 +20,8 @@ export default function QuizCard({
   question,
   answers,
   isCorrect,
+  isActive,
+  onClick,
 }) {
   const [isAnswered, setIsAnswered] = useState(false)
 
@@ -31,22 +34,75 @@ export default function QuizCard({
         <h3>{question}</h3>
         <ul>
           {answers.map(answer => (
-            <li key={answer} isCorrect={isCorrect}>
+            <li key={answer} isCorrect={isCorrect} isAnswered={isAnswered}>
               {answer}
             </li>
           ))}
         </ul>
-        <button onClick={(showSolution, setIsAnswered)}>Beantworten</button>
+        <button onClick={onClick} isActive={isActive}>
+          Beantworten
+        </button>
       </Card>
     </>
   )
 }
 
 const Card = styled.div`
-  padding: 20px;
+  display: grid;
+  gap: 30px;
+  line-height: 1;
+  background-color: white;
+  padding: 40px;
+  border-radius: 30px;
+  color: gray;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  h3 {
+    color: #565656;
+    line-height: 1.4;
+  }
+
+  p {
+    text-align: left;
+    line-height: 1.4;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-left: 0;
+    padding-right: 20px;
+    list-style-type: none;
+    justify-content: center;
+
+    li {
+      scale: 90%;
+      opacity: 100%;
+      line-height: 1;
+      padding: 6px 15px 5px;
+      border-radius: 25px;
+      border: 2px gray solid;
+      background-color: white;
+      color: gray;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+  button {
+    width: fit-content;
+    opacity: 100%;
+    height: auto;
+    padding: 10px 15px;
+    font-weight: 600;
+    border-radius: 15px;
+    justify-self: center;
+    border: none;
+    background-color: darkgray;
+    color: white;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  }
 `
 
-function showSolution() {
-  // Antwort richtig: hebt richtige Antwort grün hervor. Toggelt setIsAnswered
-  // Antwort falsch:  falsche Antwort wird rot hervorgehoben
-}
+// Antwort richtig: hebt richtige Antwort grün hervor. Toggelt setIsAnswered
+// Antwort falsch:  falsche Antwort wird rot hervorgehoben
