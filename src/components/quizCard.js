@@ -27,7 +27,7 @@ export default function QuizCard({
     <>
       <GlobalStyle />
       <Card isAnswered={isAnswered}>
-        <h3>{title}</h3>
+        <h2>{title}</h2>
         <p>{scenario}</p>
         <h3>{question}</h3>
         <ul>
@@ -55,6 +55,9 @@ const Card = styled.div`
   color: gray;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
+
+  h2 {
+  }
 
   h3 {
     color: #565656;
