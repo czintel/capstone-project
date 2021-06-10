@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 import { useState } from 'react'
+import GlobalStyle from '../GlobalStyle'
 
 QuizCard.propTypes = {
   onClick: PropTypes.func,
@@ -22,26 +23,30 @@ export default function QuizCard({
   const [isAnswered, setIsAnswered] = useState(false)
 
   return (
-    <Card isAnswered={isAnswered}>
-      <h3>{title}</h3>
-      <p>{scenario}</p>
-      <h3>{question}</h3>
-      <ul>
-        {answers.map(answer => (
-          <li key={answer} isCorrect={isCorrect}>
-            {answer}
-          </li>
-        ))}
-      </ul>
-      <button
-        onClick={() => setIsAnswered(isCorrect ? !isAnswered : isAnswered)}
-      >
-        beantworten
-      </button>
-    </Card>
+    <>
+      <GlobalStyle />
+      <Card isAnswered={isAnswered}>
+        <h3>{title}</h3>
+        <p>{scenario}</p>
+        <h3>{question}</h3>
+        <ul>
+          {answers.map(answer => (
+            <li key={answer} isCorrect={isCorrect}>
+              {answer}
+            </li>
+          ))}
+        </ul>
+        <button onClick={(showSolution, setIsAnswered)}>Beantworten</button>
+      </Card>
+    </>
   )
 }
 
 const Card = styled.div`
   padding: 20px;
 `
+
+function showSolution() {
+  // Antwort richtig: hebt richtige Antwort grün hervor. Toggelt setIsAnswered
+  // Antwort falsch:  falsche Antwort wird rot hervorgehoben
+}
