@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
-import { useState } from 'react'
 import GlobalStyle from '../GlobalStyle'
 
 QuizCard.propTypes = {
@@ -22,9 +21,8 @@ export default function QuizCard({
   isCorrect,
   isActive,
   onClick,
+  isAnswered,
 }) {
-  const [isAnswered, setIsAnswered] = useState(false)
-
   return (
     <>
       <GlobalStyle />
@@ -103,6 +101,8 @@ const Card = styled.div`
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   }
 `
-
+//function onAnswer() {
+//  return console.log('Hello World!')
 // Antwort richtig: hebt richtige Antwort grün hervor. Toggelt setIsAnswered
 // Antwort falsch:  falsche Antwort wird rot hervorgehoben
+//}
