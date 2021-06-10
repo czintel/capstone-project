@@ -3,6 +3,7 @@ import styled from 'styled-components/macro'
 import GlobalStyle from '../GlobalStyle'
 
 QuizCard.propTypes = {
+  data: PropTypes.array,
   onClick: PropTypes.func,
   isAnswered: PropTypes.bool,
   isCorrect: PropTypes.bool,
@@ -14,6 +15,7 @@ QuizCard.propTypes = {
 }
 
 export default function QuizCard({
+  data,
   title,
   scenario,
   question,
@@ -31,9 +33,13 @@ export default function QuizCard({
         <p>{scenario}</p>
         <h3>{question}</h3>
         <ul>
-          {answers.map(answer => (
-            <li key={answer} isCorrect={isCorrect} isAnswered={isAnswered}>
-              {answer}
+          {data.quiz.map(answer => (
+            <li
+              key={question}
+              isCorrect={answers.isCorrect}
+              isAnswered={isAnswered}
+            >
+              {answers.answer.map}
             </li>
           ))}
         </ul>
