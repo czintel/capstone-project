@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import QuizCardPage from './pages/quizCardPage'
+import QuizCardPage from './pages/QuizCardPage'
 import data from './data.json'
 
 function App() {

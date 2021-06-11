@@ -1,5 +1,5 @@
 import React from 'react'
-import QuizCard from './quizCard'
+import QuizCard from './QuizCard'
 
 export default {
   title: 'QuizCard',

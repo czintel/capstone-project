@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
-import QuizCard from '../components/quizCard'
+import QuizCard from '../components/QuizCard'
 
 quizCardPage.propTypes = {
   data: PropTypes.array,
@@ -23,7 +23,6 @@ export default function quizCardPage({ data }) {
 }
 
 const PageWrapper = styled.section`
-  scroll-behavior: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -31,4 +30,5 @@ const PageWrapper = styled.section`
   max-width: 370px;
   margin: 0 auto;
   padding: 20px;
+  scroll-behavior: auto;
 `
