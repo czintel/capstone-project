@@ -2,11 +2,11 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 import QuizCard from '../components/QuizCard'
 
-quizCardPage.propTypes = {
+QuizCardPage.propTypes = {
   data: PropTypes.array,
 }
 
-export default function quizCardPage({ data }) {
+export default function QuizCardPage({ data }) {
   return (
     <PageWrapper>
       {data.quiz.map(({ title, scenario, question, answers, id }) => (
