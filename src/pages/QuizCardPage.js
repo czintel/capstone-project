@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 import QuizCard from '../components/QuizCard'
+import { uuid } from 'uuidv4'
 
 QuizCardPage.propTypes = {
   data: PropTypes.array,
@@ -9,18 +10,20 @@ QuizCardPage.propTypes = {
 export default function QuizCardPage({ data }) {
   return (
     <PageWrapper>
-      {data.quiz.map((
-        { title, scenario, question, answers, id } // add {emotionId} later
-      ) => (
-        <QuizCard
-          key={id}
-          title={title}
-          scenario={scenario}
-          question={question}
-          answers={answers}
-          //  correctAnswerColor={data.emotions.find(emotion => emotion.id === emotionId).color}
-        />
-      ))}
+      {data.quiz.map(
+        ({ title, scenario, question, answers, id, emotionId }) => (
+          <QuizCard
+            key={uuid}
+            title={title}
+            scenario={scenario}
+            question={question}
+            answers={answers}
+            correctAnswerColor={
+              data.emotions.find(emotion => emotion.id === emotionId).color
+            }
+          />
+        )
+      )}
     </PageWrapper>
   )
 }

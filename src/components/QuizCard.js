@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 import GlobalStyle from '../GlobalStyle'
+import { uuid } from 'uuidv4'
+import { useState } from 'react'
 
 QuizCard.propTypes = {
   onClick: PropTypes.func,
@@ -19,11 +21,13 @@ export default function QuizCard({
   scenario,
   question,
   answers,
-  isActive,
   onClick,
-  isAnswered,
-  // correctAnswerColor,
+  // correctAnswerColor
 }) {
+  const [isActive, setIsActive] = useState(false)
+  const [isAnswered, setIsAnswered] = useState(false)
+  const [isSelected, setIsSelected] = useState(false)
+
   return (
     <>
       <GlobalStyle />
@@ -34,15 +38,16 @@ export default function QuizCard({
         <ul>
           {answers.map(answer => (
             <li
-              key={answer.question}
+              key={uuid}
               isCorrect={answer.isCorrect}
-              isAnswered={isAnswered}
+              isSelected={isSelected}
+              onClick={(setIsSelected, setIsActive)}
             >
               {answer.answer}
             </li>
           ))}
         </ul>
-        <button onClick={onClick} isActive={isActive}>
+        <button onClick={setIsAnswered} isActive={isActive}>
           Beantworten
         </button>
       </Card>
