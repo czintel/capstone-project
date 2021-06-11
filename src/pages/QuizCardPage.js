@@ -18,9 +18,9 @@ export default function QuizCardPage({ data }) {
             scenario={scenario}
             question={question}
             answers={answers}
-            correctAnswerColor={
-              data.emotions.find(emotion => emotion.id === emotionId).color
-            }
+            //           correctAnswerColor={
+            //             data.emotions.find(emotion => emotion.id === emotionId).color
+            //           }
           />
         )
       )}

@@ -21,7 +21,6 @@ export default function QuizCard({
   scenario,
   question,
   answers,
-  onClick,
   // correctAnswerColor
 }) {
   const [isActive, setIsActive] = useState(false)
@@ -41,7 +40,10 @@ export default function QuizCard({
               key={uuid}
               isCorrect={answer.isCorrect}
               isSelected={isSelected}
-              onClick={(setIsSelected, setIsActive)}
+              onClick={() => {
+                setIsSelected(!isSelected)
+                setIsActive(!isActive)
+              }}
             >
               {answer.answer}
             </li>
@@ -89,9 +91,9 @@ const Card = styled.div`
   ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
     padding-left: 40px;
-    padding-right: 60px;
+    padding-right: 50px;
     list-style-type: none;
     justify-content: center;
 
