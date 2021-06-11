@@ -22,11 +22,13 @@ export default function QuizCard({
   isActive,
   onClick,
   isAnswered,
+  correctAnswerColor,
 }) {
   return (
     <>
       <GlobalStyle />
       <Card isAnswered={isAnswered}>
+        {correctAnswerColor}
         <h2>{title}</h2>
         <p>{scenario}</p>
         <h3>{question}</h3>

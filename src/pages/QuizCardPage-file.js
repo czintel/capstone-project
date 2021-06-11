@@ -9,15 +9,20 @@ QuizCardPage.propTypes = {
 export default function QuizCardPage({ data }) {
   return (
     <PageWrapper>
-      {data.quiz.map(({ title, scenario, question, answers, id }) => (
-        <QuizCard
-          key={id}
-          title={title}
-          scenario={scenario}
-          question={question}
-          answers={answers}
-        />
-      ))}
+      {data.quiz.map(
+        ({ title, scenario, question, answers, id, emotionId }) => (
+          <QuizCard
+            key={id}
+            title={title}
+            scenario={scenario}
+            question={question}
+            answers={answers}
+            correctAnswerColor={
+              data.emotions.find(emotion => emotion.id === emotionId).color
+            }
+          />
+        )
+      )}
     </PageWrapper>
   )
 }
