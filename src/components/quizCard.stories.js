@@ -14,5 +14,11 @@ DefaultLearningCard.args = {
   scenario:
     'Du spielst gerade mit deinen Freunden ein Fußballmatch und bist kurz davor, ein Tor zu schießen. In diesem Moment foult dich ein Gegner, um dich an deinem Tor zu hindern und lacht dich anschließend aus.',
   question: 'Welches Gefühl spürst du in diesem Moment?',
-  answers: ['Freude', 'Angst', 'Wut', 'Kummer', 'Ekel'],
+  answers: [
+    { answer: 'Freude', isCorrect: false },
+    { answer: 'Angst', isCorrect: false },
+    { answer: 'Wut', isCorrect: true },
+    { answer: 'Kummer', isCorrect: false },
+    { answer: 'Ekel', isCorrect: false },
+  ],
 }
