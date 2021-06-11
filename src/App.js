@@ -1,14 +1,12 @@
 import styled from 'styled-components/macro'
-import QuizCard from './components/quizCard'
+import QuizCardPage from './pages/quizCardPage'
 import data from './data.json'
-import LearningCardPage from './pages/LearningCardPage'
 
 function App() {
   return (
     <>
       <AppWrapper>
-        <LearningCardPage data={data} />
-        <QuizCard />
+        <QuizCardPage data={data} />
       </AppWrapper>
     </>
   )

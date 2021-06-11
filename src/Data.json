@@ -1,66 +1,103 @@
-[
-  {
-    "emotions": [
-      {
-        "name": "Freude",
-        "description": "Freude ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-        "tags": ["fröhlich", "lachen", "Glück", "happy"],
-        "color": "#F2C849",
-        "id": 1
-      },
-      {
-        "name": "Angst",
-        "description": "Angst ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-        "tags": ["ängstlich", "Schreck", "zittern", "Furcht"],
-        "color": "#A484E9",
-        "id": 2
-      },
-      {
-        "name": "Wut",
-        "description": "Wut ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-        "tags": ["sauer", "Wutanfall", "aggressiv", "rasend"],
-        "color": "#F4889A",
-        "id": 3
-      },
-      {
-        "name": "Kummer",
-        "description": "Kummer ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-        "tags": ["traurig", "Tränen", "weinen", "Schmerz"],
-        "color": "#31BFF3",
-        "id": 4
-      },
-      {
-        "name": "Ekel",
-        "description": "Ekel ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-        "tags": ["ekelhaft", "angewidert", "abstoßend", "Empörung"],
-        "color": "#79D45E",
-        "id": 5
-      }
-    ],
-    "quiz": [
-      {
-        "title": "Stell dir vor...",
-        "scenario": "... du wärst ein Affe.",
-        "question": "Wiebescheuert wäre das?",
-        "answers": [
-          {
-            "answer": "ganz ok",
-            "isCorrect": true
-          },
-          {
-            "answer": "muss nicht",
-            "isCorrect": false
-          },
-          {
-            "answer": "ohjaaa",
-            "isCorrect": false
-          },
-          {
-            "answer": "ugaah, uggaaah",
-            "isCorrect": false
-          }
-        ]
-      }
-    ]
-  }
-]
+{
+  "emotions": [
+    {
+      "name": "Freude",
+      "description": "Freude ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "tags": ["fröhlich", "lachen", "Glück", "happy"],
+      "color": "#F2C849",
+      "id": 1
+    },
+    {
+      "name": "Angst",
+      "description": "Angst ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "tags": ["ängstlich", "Schreck", "zittern", "Furcht"],
+      "color": "#A484E9",
+      "id": 2
+    },
+    {
+      "name": "Wut",
+      "description": "Wut ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "tags": ["sauer", "Wutanfall", "aggressiv", "rasend"],
+      "color": "#F4889A",
+      "id": 3
+    },
+    {
+      "name": "Kummer",
+      "description": "Kummer ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "tags": ["traurig", "Tränen", "weinen", "Schmerz"],
+      "color": "#31BFF3",
+      "id": 4
+    },
+    {
+      "name": "Ekel",
+      "description": "Ekel ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "tags": ["ekelhaft", "angewidert", "abstoßend", "Empörung"],
+      "color": "#79D45E",
+      "id": 5
+    }
+  ],
+  "quiz": [
+    {
+      "title": "Stell dir vor...",
+      "scenario": "Paul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer bad design, because that is what it lives with. The new becomes threatening, the old reassuring.” Someday is not a fucking day of the week. Be fucking",
+      "question": "Wie bescheuert wäre das?",
+      "answers": [
+        {
+          "answer": "Antwort A",
+          "isCorrect": true
+        },
+        {
+          "answer": "Lange Antwort B",
+          "isCorrect": false
+        },
+        {
+          "answer": "NTWRT C",
+          "isCorrect": false
+        },
+        {
+          "answer": "Möglichkeit D",
+          "isCorrect": false
+        },
+        {
+          "answer": "Option E",
+          "isCorrect": false
+        },
+        {
+          "answer": "Lösung F",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Stell dir vor... 2",
+      "scenario": "Paul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer bad design, because that is what it lives with. The new becomes threatening, the old reassuring.” Someday is not a fucking day of the week. Be fucking",
+      "question": "Wie bescheuert wäre das?",
+      "answers": [
+        {
+          "answer": "Antwort A",
+          "isCorrect": true
+        },
+        {
+          "answer": "Lange Antwort B",
+          "isCorrect": false
+        },
+        {
+          "answer": "NTWRT C",
+          "isCorrect": false
+        },
+        {
+          "answer": "Möglichkeit D",
+          "isCorrect": false
+        },
+        {
+          "answer": "Option E",
+          "isCorrect": false
+        },
+        {
+          "answer": "Lösung F",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}

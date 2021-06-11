@@ -9,18 +9,15 @@ quizCardPage.propTypes = {
 export default function quizCardPage({ data }) {
   return (
     <PageWrapper>
-      {data.quiz.map(
-        ({ title, scenario, question, answers, isCorrect, id }) => (
-          <QuizCard
-            key={id}
-            title={title}
-            scenario={scenario}
-            question={question}
-            answers={answers}
-            isCorrect={isCorrect}
-          />
-        )
-      )}
+      {data.quiz.map(({ title, scenario, question, answers, id }) => (
+        <QuizCard
+          key={id}
+          title={title}
+          scenario={scenario}
+          question={question}
+          answers={answers}
+        />
+      ))}
     </PageWrapper>
   )
 }
