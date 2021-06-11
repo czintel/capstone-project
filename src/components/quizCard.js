@@ -52,23 +52,30 @@ export default function QuizCard({
 const Card = styled.div`
   display: grid;
   gap: 30px;
+  max-width: 670px;
   line-height: 1;
   background-color: white;
-  padding: 40px;
+  padding: 0 0 40px;
   border-radius: 30px;
   color: gray;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
 
   h2 {
+    background-color: #565656;
+    color: white;
+    padding: 20px;
+    border-radius: 30px 30px 0 0;
   }
 
   h3 {
     color: #565656;
+    padding: 0 40px;
     line-height: 1.4;
   }
 
   p {
+    padding: 0 40px;
     text-align: left;
     line-height: 1.4;
   }
@@ -77,8 +84,8 @@ const Card = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    padding-left: 0;
-    padding-right: 20px;
+    padding-left: 40px;
+    padding-right: 60px;
     list-style-type: none;
     justify-content: center;
 
