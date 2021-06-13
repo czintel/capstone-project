@@ -9,8 +9,10 @@ function App() {
     <>
       <Router>
         <AppWrapper>
+          <LearningCardPage data={data} />
+          <QuizCardPage data={data} />
           <Switch>
-            <Route path="/learning" component={QuizCardPage} data={data} />
+            <Route path="/quiz" component={QuizCardPage} />
             <Route path="/learning" component={LearningCardPage} />
           </Switch>
         </AppWrapper>

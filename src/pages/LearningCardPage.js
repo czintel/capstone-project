@@ -3,13 +3,13 @@ import styled from 'styled-components/macro'
 import LearningCard from '../components/LearningCard'
 
 LearningCardList.propTypes = {
-  emotions: PropTypes.array,
+  data: PropTypes.array,
 }
 
-export default function LearningCardList({ emotions }) {
+export default function LearningCardList({ data }) {
   return (
     <PageWrapper>
-      {emotions.map(({ name, description, tags, color, id }) => (
+      {data.map(({ name, description, tags, color, id }) => (
         <LearningCard
           key={id}
           name={name}
