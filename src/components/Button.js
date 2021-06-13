@@ -19,7 +19,7 @@ const StyledButton = styled.button`
   height: auto;
   padding: 10px 15px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 15px;
   border-radius: 15px;
   justify-self: end;
   border: none;

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 import GlobalStyle from '../GlobalStyle'
+import Button from './Button'
 import { uuid } from 'uuidv4'
 import { useState } from 'react'
 
@@ -49,9 +50,9 @@ export default function QuizCard({
             </li>
           ))}
         </ul>
-        <button onClick={setIsAnswered} isActive={isActive}>
+        <Button onClick={setIsAnswered} isActive={isActive}>
           Beantworten
-        </button>
+        </Button>
       </Card>
     </>
   )
@@ -110,17 +111,7 @@ const Card = styled.div`
     }
   }
   button {
-    width: fit-content;
-    opacity: 100%;
-    height: auto;
-    padding: 10px 15px;
-    font-weight: 600;
-    border-radius: 15px;
     justify-self: center;
-    border: none;
-    background-color: darkgray;
-    color: white;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   }
 `
 //function onAnswer() {

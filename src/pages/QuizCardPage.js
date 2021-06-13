@@ -11,7 +11,7 @@ QuizCardPage.propTypes = {
 export default function QuizCardPage({ data }) {
   return (
     <PageWrapper>
-      <Button>Lernen</Button>
+      <Button>&lt; Lernen</Button>
       {data.quiz.map(({ title, scenario, question, answers }) => (
         <QuizCard
           key={uuid}
