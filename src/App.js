@@ -1,13 +1,21 @@
 import styled from 'styled-components/macro'
-import QuizCardPage from './pages/QuizCardPage'
 import data from './data.json'
+import { Route, BrowserRouter as Router, Switch, Link } from 'react-router-dom'
+import QuizCardPage from './pages/QuizCardPage'
+import LearningCardPage from './LearningCardPage'
 
 function App() {
   return (
     <>
-      <AppWrapper>
-        <QuizCardPage data={data} />
-      </AppWrapper>
+      <Router>
+        <AppWrapper>
+          <QuizCardPage data={data} />
+        </AppWrapper>
+        <Switch>
+          <Route path="/learning" component={QuizCardPage} />
+          <Route path="/learning" component={LearningCardPage} />
+        </Switch>
+      </Router>
     </>
   )
 }
