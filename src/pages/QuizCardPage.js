@@ -6,12 +6,13 @@ import { uuid } from 'uuidv4'
 
 QuizCardPage.propTypes = {
   data: PropTypes.array,
+  onClick: PropTypes.func,
 }
 
-export default function QuizCardPage({ data }) {
+export default function QuizCardPage({ data, onNavigate }) {
   return (
     <PageWrapper>
-      <Button>&lt; Lernen</Button>
+      <Button onClick={onNavigate}>&lt; Lernen</Button>
       {data.quiz.map(({ title, scenario, question, answers }) => (
         <QuizCard
           key={uuid}

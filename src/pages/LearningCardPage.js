@@ -5,12 +5,13 @@ import Button from '../components/Button'
 
 LearningCardList.propTypes = {
   data: PropTypes.array,
+  onClick: PropTypes.func,
 }
 
-export default function LearningCardList({ data }) {
+export default function LearningCardList({ data, onNavigate }) {
   return (
     <PageWrapper>
-      <Button>Quiz &gt;</Button>
+      <Button onClick={onNavigate}>Quiz &gt;</Button>
       <CardWrapper>
         {data.emotions.map(({ name, description, tags, color, id }) => (
           <LearningCard
