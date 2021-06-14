@@ -27,7 +27,7 @@ export default function QuizCard({
   const [isAnswered, setIsAnswered] = useState(false)
   // ist der Index: answers[selectedAnswer] = {answer: "Freude", isCorrect: true}
   const [selectedAnswer, setSelectedAnswer] = useState(null)
-  function answerQuestion(index) {
+  function selectAnswer(index) {
     if (selectedAnswer === index) {
       setSelectedAnswer(null)
       setIsActive(false)
@@ -48,7 +48,7 @@ export default function QuizCard({
               <ButtonAnswerOption
                 selectedAnswer={selectedAnswer === index}
                 isCorrect={answer.isCorrect}
-                onClick={() => answerQuestion(index)}
+                onClick={() => selectAnswer(index)}
               >
                 {answer.answer}
               </ButtonAnswerOption>
