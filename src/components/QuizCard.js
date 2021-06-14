@@ -39,7 +39,7 @@ export default function QuizCard({
         <ul>
           {answers.map(answer => (
             <li isSelected={isSelected}>
-              <button
+              <ButtonAnswerOption
                 isSelected={isSelected}
                 key={uuid}
                 isCorrect={answer.isCorrect}
@@ -49,7 +49,7 @@ export default function QuizCard({
                 }}
               >
                 {answer.answer}
-              </button>
+              </ButtonAnswerOption>
             </li>
           ))}
         </ul>
@@ -100,19 +100,6 @@ const Card = styled.div`
     padding-right: 50px;
     list-style-type: none;
     justify-content: center;
-
-    li {
-      button {
-        scale: 100%;
-        font-size: 14px;
-        line-height: 1;
-        padding: 5px 10px 5px;
-        border-radius: 15px;
-        border: 2px darkgray solid;
-        background-color: ${prop => (prop.isSelected ? 'gray' : 'white')};
-        color: ${prop => (prop.isSelected ? 'white' : 'gray')};
-      }
-    }
   }
 `
 
@@ -123,4 +110,14 @@ const ButtonSolution = styled(Button)`
   color: white;
   opacity: ${prop => (prop.isActive ? '100%' : '40%')};
   height: 40px;
+`
+const ButtonAnswerOption = styled.button`
+  scale: 100%;
+  font-size: 14px;
+  line-height: 1;
+  padding: 5px 10px 5px;
+  border-radius: 15px;
+  border: 2px gray solid;
+  background-color: ${prop => (prop.isSelected ? 'gray' : 'white')};
+  color: ${prop => (prop.isSelected ? 'white' : 'gray')};
 `
