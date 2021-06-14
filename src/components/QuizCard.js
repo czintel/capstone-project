@@ -37,22 +37,24 @@ export default function QuizCard({
         <h3>{question}</h3>
         <ul>
           {answers.map(answer => (
-            <li
-              key={uuid}
-              isCorrect={answer.isCorrect}
-              isSelected={isSelected}
-              onClick={() => {
-                setIsSelected(!isSelected)
-                setIsActive(!isActive)
-              }}
-            >
-              {answer.answer}
+            <li>
+              <button
+                key={uuid}
+                isCorrect={answer.isCorrect}
+                isSelected={isSelected}
+                onClick={() => {
+                  setIsSelected(!isSelected)
+                  setIsActive(!isActive)
+                }}
+              >
+                {answer.answer}
+              </button>
             </li>
           ))}
         </ul>
-        <Button onClick={setIsAnswered} isActive={isActive}>
+        <ButtonSolution onClick={setIsAnswered} isActive={isActive}>
           Beantworten
-        </Button>
+        </ButtonSolution>
       </Card>
     </>
   )
@@ -99,22 +101,26 @@ const Card = styled.div`
     justify-content: center;
 
     li {
-      scale: 100%;
-      font-size: 14px;
-      opacity: 100%;
-      line-height: 1;
-      padding: 6px 10px 5px;
-      border-radius: 25px;
-      border: 2px gray solid;
-      background-color: white;
-      color: gray;
+      button {
+        scale: 100%;
+        font-size: 14px;
+        opacity: 100%;
+        line-height: 1;
+        padding: 6px 10px 5px;
+        border-radius: 25px;
+        border: 2px gray solid;
+        background-color: white;
+        color: gray;
+      }
     }
   }
-  button {
-    justify-self: center;
-    width: fit-content;
-  }
 `
+
+const ButtonSolution = styled(Button)`
+  justify-self: center;
+  width: fit-content;
+`
+
 //function onAnswer() {
 //  return console.log('Hello World!')
 // Antwort richtig: hebt richtige Antwort grün hervor. Toggelt setIsAnswered
