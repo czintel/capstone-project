@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 import QuizCard from '../components/QuizCard'
 import Button from '../components/Button'
-import { uuid } from 'uuidv4'
 
 QuizCardPage.propTypes = {
   data: PropTypes.array,
@@ -13,9 +12,9 @@ export default function QuizCardPage({ data, onNavigate }) {
   return (
     <PageWrapper>
       <Button onClick={onNavigate}>&lt; Lernen</Button>
-      {data.quiz.map(({ title, scenario, question, answers }) => (
+      {data.quiz.map(({ title, scenario, question, answers }, index) => (
         <QuizCard
-          key={uuid}
+          key={index}
           title={title}
           scenario={scenario}
           question={question}

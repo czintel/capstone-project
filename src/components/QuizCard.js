@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
-import GlobalStyle from '../GlobalStyle'
 import Button from './Button'
-import { uuid } from 'uuidv4'
 import { useState } from 'react'
 
 QuizCard.propTypes = {
@@ -27,26 +25,30 @@ export default function QuizCard({
 }) {
   const [isActive, setIsActive] = useState(false)
   const [isAnswered, setIsAnswered] = useState(false)
-  const [isSelected, setIsSelected] = useState(false)
-
+  // ist der Index: answers[selectedAnswer] = {answer: "Freude", isCorrect: true}
+  const [selectedAnswer, setSelectedAnswer] = useState(null)
+  function answerQuestion(index) {
+    if (selectedAnswer === index) {
+      setSelectedAnswer(null)
+      setIsActive(false)
+    } else {
+      setSelectedAnswer(index)
+      setIsActive(true)
+    }
+  }
   return (
     <>
-      <GlobalStyle />
       <Card isAnswered={isAnswered}>
         <h2>{title}</h2>
         <p>{scenario}</p>
         <h3>{question}</h3>
         <ul>
-          {answers.map(answer => (
-            <li isSelected={isSelected}>
+          {answers.map((answer, index) => (
+            <li key={index}>
               <ButtonAnswerOption
-                isSelected={isSelected}
-                key={uuid}
+                selectedAnswer={selectedAnswer === index}
                 isCorrect={answer.isCorrect}
-                onClick={() => {
-                  setIsSelected(!isSelected)
-                  setIsActive(!isActive)
-                }}
+                onClick={() => answerQuestion(index)}
               >
                 {answer.answer}
               </ButtonAnswerOption>
@@ -118,6 +120,6 @@ const ButtonAnswerOption = styled.button`
   padding: 5px 10px 5px;
   border-radius: 15px;
   border: 2px gray solid;
-  background-color: ${prop => (prop.isSelected ? 'gray' : 'white')};
-  color: ${prop => (prop.isSelected ? 'white' : 'gray')};
+  background-color: ${prop => (prop.selectedAnswer ? 'gray' : 'white')};
+  color: ${prop => (prop.selectedAnswer ? 'white' : 'gray')};
 `
