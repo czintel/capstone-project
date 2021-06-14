@@ -112,6 +112,7 @@ const Card = styled.div`
   }
   button {
     justify-self: center;
+    width: fit-content;
   }
 `
 //function onAnswer() {

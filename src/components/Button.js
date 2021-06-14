@@ -15,7 +15,7 @@ export default function Button({ onClick, children, ...props }) {
 }
 
 const StyledButton = styled.button`
-  width: fit-content;
+  width: 100px;
   height: auto;
   padding: 10px 15px;
   font-weight: 600;
