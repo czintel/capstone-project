@@ -9,6 +9,7 @@ QuizCard.propTypes = {
   onClick: PropTypes.func,
   isAnswered: PropTypes.bool,
   isCorrect: PropTypes.bool,
+  isSelected: PropTypes.bool,
   isActive: PropTypes.bool,
   title: PropTypes.string,
   scenario: PropTypes.string,
@@ -37,11 +38,11 @@ export default function QuizCard({
         <h3>{question}</h3>
         <ul>
           {answers.map(answer => (
-            <li>
+            <li isSelected={isSelected}>
               <button
+                isSelected={isSelected}
                 key={uuid}
                 isCorrect={answer.isCorrect}
-                isSelected={isSelected}
                 onClick={() => {
                   setIsSelected(!isSelected)
                   setIsActive(!isActive)
@@ -104,13 +105,12 @@ const Card = styled.div`
       button {
         scale: 100%;
         font-size: 14px;
-        opacity: 100%;
         line-height: 1;
-        padding: 6px 10px 5px;
-        border-radius: 25px;
-        border: 2px gray solid;
-        background-color: white;
-        color: gray;
+        padding: 5px 10px 5px;
+        border-radius: 15px;
+        border: 2px darkgray solid;
+        background-color: ${prop => (prop.isSelected ? 'gray' : 'white')};
+        color: ${prop => (prop.isSelected ? 'white' : 'gray')};
       }
     }
   }
@@ -119,10 +119,8 @@ const Card = styled.div`
 const ButtonSolution = styled(Button)`
   justify-self: center;
   width: fit-content;
+  background-color: #72d3fe;
+  color: white;
+  opacity: ${prop => (prop.isActive ? '100%' : '40%')};
+  height: 40px;
 `
-
-//function onAnswer() {
-//  return console.log('Hello World!')
-// Antwort richtig: hebt richtige Antwort grün hervor. Toggelt setIsAnswered
-// Antwort falsch:  falsche Antwort wird rot hervorgehoben
-//}
