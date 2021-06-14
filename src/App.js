@@ -33,11 +33,11 @@ const AppWrapper = styled.section`
   justify-content: center;
 `
 // import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
-{
-  /* <Router>
-   <Switch>
-      <Route path="/quiz" component={QuizCardPage} />
-      <Route path="/learning" component={LearningCardPage} />
-    </Switch>
-</Router> */
-}
+// {
+//   /* <Router>
+//    <Switch>
+//       <Route path="/quiz" component={QuizCardPage} />
+//       <Route path="/learning" component={LearningCardPage} />
+//     </Switch>
+// </Router> */
+// }
