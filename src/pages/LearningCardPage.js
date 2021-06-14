@@ -9,7 +9,7 @@ LearningCardList.propTypes = {
 export default function LearningCardList({ data }) {
   return (
     <PageWrapper>
-      {data.map(({ name, description, tags, color, id }) => (
+      {data.emotions.map(({ name, description, tags, color, id }) => (
         <LearningCard
           key={id}
           name={name}
