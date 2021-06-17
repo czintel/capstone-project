@@ -15,18 +15,13 @@ QuizCard.propTypes = {
 }
 export default function QuizCard({ title, scenario, question, answers }) {
   const [bgColor, setBgColor] = useState('darkgray')
-  const [isClicked, setIsClicked] = useState(false)
-
-  function handleAnswerClick(isCorrect, isClicked) {
-    setIsClicked(!isClicked)
-    if (isCorrect === true) {
-      setBgColor('#99c140')
-      console.log('richtig')
-    } else {
-      setBgColor('#cc3232')
-      console.log('falsch')
-    }
+  const [selectedAnswer, setSelectedAnswer] = useState(null)
+  const handleAnswerClick = (isCorrect, answer) => {
+    const color = isCorrect ? '#99c140' : '#cc3232'
+    setBgColor(color)
+    setSelectedAnswer(answer)
   }
+
   return (
     <>
       <Card bgColor={bgColor}>
@@ -34,13 +29,16 @@ export default function QuizCard({ title, scenario, question, answers }) {
         <p>{scenario}</p>
         <h3>{question}</h3>
         <AnswerSection>
-          {answers.map((answer, index) => (
+          {answers.map(answer => (
             <AnswerButton
-              key={index}
-              onClick={() => handleAnswerClick(answer.isCorrect, isClicked)}
+              key={answer.answerText}
+              onClick={() =>
+                handleAnswerClick(answer.isCorrect, answer.answerText)
+              }
               isCorrect={answer.isCorrect}
-              bgColor={bgColor}
-              isClicked={isClicked}
+              bgColor={
+                answer.answerText === selectedAnswer ? bgColor : 'darkgray'
+              }
             >
               {answer.answerText}
             </AnswerButton>
@@ -91,7 +89,6 @@ const AnswerSection = styled.div`
 const AnswerButton = styled.button`
   scale: 100%;
   font-size: 14px;
-  font-weight: ${prop => (prop.isClicked ? '700' : '400')};
   line-height: 1;
   padding: 5px 10px 5px;
   border-radius: 15px;
