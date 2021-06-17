@@ -1,19 +1,17 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
-import Button from './Button'
 import { useState } from 'react'
 
 QuizCard.propTypes = {
   onClick: PropTypes.func,
-  isAnswered: PropTypes.bool,
+  isAnsweredCorrectly: PropTypes.bool,
   isCorrect: PropTypes.bool,
-  isSelected: PropTypes.bool,
-  isActive: PropTypes.bool,
   title: PropTypes.string,
   scenario: PropTypes.string,
   question: PropTypes.string,
   answers: PropTypes.array,
   answer: PropTypes.string,
+  className: PropTypes.string,
 }
 
 export default function QuizCard({
@@ -21,43 +19,40 @@ export default function QuizCard({
   scenario,
   question,
   answers,
-  // correctAnswerColor
+  className,
 }) {
-  const [isActive, setIsActive] = useState(false)
-  const [isAnswered, setIsAnswered] = useState(false)
-  // ist der Index: answers[selectedAnswer] = {answer: "Freude", isCorrect: true}
-  const [selectedAnswer, setSelectedAnswer] = useState(null)
-  function selectAnswer(index) {
-    if (selectedAnswer === index) {
-      setSelectedAnswer(null)
-      setIsActive(false)
+  const [isAnsweredCorrectly, setIsAnsweredCorrectly] = useState()
+
+  function handleAnswerClick(isCorrect) {
+    if (isCorrect === true) {
+      setIsAnsweredCorrectly(true)
+      console.log('richtig')
     } else {
-      setSelectedAnswer(index)
-      setIsActive(true)
+      setIsAnsweredCorrectly(false)
+      console.log('falsch')
     }
   }
+
   return (
     <>
-      <Card isAnswered={isAnswered}>
-        <h2>{title}</h2>
+      <Card isAnsweredCorrectly={isAnsweredCorrectly}>
+        <h2 className={isAnsweredCorrectly ? 'correctAnswer' : 'wrongAnswer'}>
+          {title}
+        </h2>
         <p>{scenario}</p>
         <h3>{question}</h3>
-        <ul>
+        <AnswerSection>
           {answers.map((answer, index) => (
-            <li key={index}>
-              <ButtonAnswerOption
-                selectedAnswer={selectedAnswer === index}
-                isCorrect={answer.isCorrect}
-                onClick={() => selectAnswer(index)}
-              >
-                {answer.answer}
-              </ButtonAnswerOption>
-            </li>
+            <AnswerButton
+              key={index}
+              onClick={() => handleAnswerClick(answer.isCorrect)}
+              isCorrect={answer.isCorrect}
+              className={isAnsweredCorrectly ? 'correctAnswer' : 'wrongAnswer'}
+            >
+              {answer.answerText}
+            </AnswerButton>
           ))}
-        </ul>
-        <ButtonSolution onClick={setIsAnswered} isActive={isActive}>
-          Beantworten
-        </ButtonSolution>
+        </AnswerSection>
       </Card>
     </>
   )
@@ -80,6 +75,16 @@ const Card = styled.div`
     color: white;
     padding: 20px;
     border-radius: 30px 30px 0 0;
+
+    &.correctAnswer {
+      background-color: #99c140;
+      color: white;
+    }
+
+    &.wrongAnswer {
+      background-color: #cc3232;
+      color: white;
+    }
   }
 
   h3 {
@@ -93,33 +98,44 @@ const Card = styled.div`
     text-align: left;
     line-height: 1.4;
   }
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding-left: 40px;
-    padding-right: 50px;
-    list-style-type: none;
-    justify-content: center;
-  }
+`
+const AnswerSection = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-left: 40px;
+  padding-right: 50px;
+  list-style-type: none;
+  justify-content: center;
 `
 
-const ButtonSolution = styled(Button)`
-  justify-self: center;
-  width: fit-content;
-  background-color: #72d3fe;
-  color: white;
-  opacity: ${prop => (prop.isActive ? '100%' : '40%')};
-  height: 40px;
-`
-const ButtonAnswerOption = styled.button`
+const AnswerButton = styled.button`
   scale: 100%;
   font-size: 14px;
   line-height: 1;
   padding: 5px 10px 5px;
   border-radius: 15px;
   border: 2px gray solid;
-  background-color: ${prop => (prop.selectedAnswer ? 'gray' : 'white')};
-  color: ${prop => (prop.selectedAnswer ? 'white' : 'gray')};
+  color: gray;
+
+  &.correctAnswer {
+    scale: 115%;
+    background-color: #99c140;
+    border: 2px #99c140 solid;
+    color: white;
+  }
+
+  &.wrongAnswer {
+    background-color: #cc3232;
+    border: 2px #cc3232 solid;
+    color: white;
+  }
 `
+
+// ${props => props.primary && css`
+// background: white;
+// color: palevioletred;
+// `}
+
+// background-color: ${prop => (prop.isAnsweredCorrectly ? 'green' : 'red')};
+// color: ${prop => (prop.isAnsweredCorrectly ? 'white' : 'white')};
