@@ -12,9 +12,9 @@ export default function QuizCardPage({ data, onNavigate }) {
   return (
     <PageWrapper>
       <Button onClick={onNavigate}>&lt; Lernen</Button>
-      {data.quiz.map(({ title, scenario, question, answers }, index) => (
+      {data.quiz.map(({ title, scenario, question, answers, qId }) => (
         <QuizCard
-          key={index}
+          key={qId}
           title={title}
           scenario={scenario}
           question={question}

@@ -13,9 +13,9 @@ export default function LearningCardList({ data, onNavigate }) {
     <PageWrapper>
       <Button onClick={onNavigate}>Quiz &gt;</Button>
       <CardWrapper>
-        {data.emotions.map(({ name, description, tags, color, id }) => (
+        {data.emotions.map(({ name, description, tags, color, emId }) => (
           <LearningCard
-            key={id}
+            key={emId}
             name={name}
             description={description}
             tags={tags}
