@@ -4,6 +4,7 @@ import QuizCardPage from './pages/QuizCardPage'
 import LearningCardPage from './pages/LearningCardPage'
 import { useState } from 'react'
 
+
 function App() {
   const [currentPage, setCurrentPage] = useState('learningCardPage')
 
@@ -24,6 +25,7 @@ function App() {
         )}
       </AppWrapper>
     </>
+
   )
 }
 
