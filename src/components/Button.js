@@ -15,11 +15,11 @@ export default function Button({ onClick, children, ...props }) {
 }
 
 const StyledButton = styled.button`
-  width: 100px;
+  width: fit-content;
   height: auto;
   padding: 10px 15px;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 1rem;
   border-radius: 15px;
   justify-self: end;
   border: none;

@@ -63,7 +63,8 @@ const Card = styled.div`
   h2 {
     background-color: ${props => props.bgColor};
     color: white;
-    padding: 20px;
+    font-size: 1.8rem;
+    padding: 20px 20px 15px;
     border-radius: 30px 30px 0 0;
   }
   h3 {
@@ -88,7 +89,7 @@ const AnswerSection = styled.div`
 `
 const AnswerButton = styled.button`
   scale: 100%;
-  font-size: 14px;
+  font-size: 0.9rem;
   line-height: 1;
   padding: 5px 10px 5px;
   border-radius: 15px;
