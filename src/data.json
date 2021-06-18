@@ -1,0 +1,181 @@
+{
+  "emotions": [
+    {
+      "name": "Freude",
+      "description": "Freude ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "tags": ["fröhlich", "lachen", "Glück", "happy"],
+      "color": "#F2C849",
+      "id": 1
+    },
+    {
+      "name": "Angst",
+      "description": "Angst ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "tags": ["ängstlich", "Schreck", "zittern", "Furcht"],
+      "color": "#A484E9",
+      "id": 2
+    },
+    {
+      "name": "Wut",
+      "description": "Wut ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "tags": ["sauer", "Wutanfall", "aggressiv", "rasend"],
+      "color": "#F4889A",
+      "id": 3
+    },
+    {
+      "name": "Kummer",
+      "description": "Kummer ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "tags": ["traurig", "Tränen", "weinen", "Schmerz"],
+      "color": "#31BFF3",
+      "id": 4
+    },
+    {
+      "name": "Ekel",
+      "description": "Ekel ist... lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "tags": ["ekelhaft", "angewidert", "abstoßend", "Empörung"],
+      "color": "#79D45E",
+      "id": 5
+    }
+  ],
+  "quiz": [
+    {
+      "title": "Stell dir vor...",
+      "scenario": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "question": "Welche Emotion spürt Tom?",
+      "qId": "1",
+      "answers": [
+        {
+          "answerText": "Freude",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Angst",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Wut",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Kummer",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Ekel",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Stell dir vor... 2",
+      "scenario": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "question": "Welche Emotion spürst du?",
+      "qId": "2",
+      "answers": [
+        {
+          "answerText": "Freude",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Angst",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Wut",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Kummer",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Ekel",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Stell dir vor... 3",
+      "scenario": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "question": "Welche Emotion spürst du?",
+      "qId": "3",
+      "answers": [
+        {
+          "answerText": "Freude",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Angst",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Wut",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Kummer",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Ekel",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Stell dir vor... 4",
+      "scenario": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "question": "Welche Emotion spürst du?",
+      "qId": "4",
+      "answers": [
+        {
+          "answerText": "Freude",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Angst",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Wut",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Kummer",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Ekel",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "title": "Stell dir vor... 5",
+      "scenario": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "question": "Welche Emotion spürst du?",
+      "qId": "5",
+      "answers": [
+        {
+          "answerText": "Freude",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Angst",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Wut",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Kummer",
+          "isCorrect": false
+        },
+        {
+          "answerText": "Ekel",
+          "isCorrect": true
+        }
+      ]
+    }
+  ]
+}

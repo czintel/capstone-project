@@ -1,9 +1,10 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components/macro'
 
 export default createGlobalStyle`
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    margin: 0;
   }
  
   body {

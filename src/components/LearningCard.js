@@ -59,19 +59,19 @@ const LearningCard = styled.div`
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 
   h2 {
-    font-size: ${prop => (prop.isExpanded ? '50px' : '30px')};
+    font-size: ${prop => (prop.isExpanded ? '3rem' : '1.6rem')};
     text-align: center;
     line-height: 1;
     margin: 0;
   }
 
   span {
-    font-size: 17px;
+    font-size: 1rem;
   }
 
   ul {
     padding: 0 10px;
-    font-size: 14px;
+    font-size: 0.9rem;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
