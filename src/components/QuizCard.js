@@ -15,7 +15,7 @@ QuizCard.propTypes = {
   isClicked: PropTypes.bool,
 }
 export default function QuizCard({ title, scenario, question, answers }) {
-  const [bgColor, setBgColor] = useState('#cccccc')
+  const [bgColor, setBgColor] = useState('darkgray')
   const [selectedAnswer, setSelectedAnswer] = useState(null)
   const handleAnswerClick = (isCorrect, answer) => {
     const color = isCorrect ? '#99c140' : '#cc3232'
@@ -54,7 +54,7 @@ const Card = styled.div`
   gap: 30px;
   max-width: 670px;
   line-height: 1;
-  background-color: white;
+  background-color: #f6f6f6;
   padding: 0 0 40px;
   border-radius: 30px;
   color: gray;
@@ -63,7 +63,7 @@ const Card = styled.div`
 
   h2 {
     background-color: ${props => props.bgColor};
-    color: white;
+    color: #f6f6f6;
     font-size: 1.8rem;
     padding: 20px 20px 15px;
     border-radius: 30px 30px 0 0;
@@ -101,6 +101,6 @@ const AnswerButton = styled.button`
     css`
       background-color: ${props.bgColor};
       border: 2px ${props.bgColor} solid;
-      color: white;
+      color: #f6f6f6;
     `}
 `

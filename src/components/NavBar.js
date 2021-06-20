@@ -27,6 +27,7 @@ const NavBarWrapper = styled.ul`
   margin: 0 20px 20px;
   padding-left: 0;
   justify-content: space-around;
+  justify-self: center;
   align-items: center;
   list-style: none;
   transform: translateX(-20px);
@@ -49,7 +50,7 @@ const StyledLink = styled(NavLink)`
   border-top-left-radius: ${prop => (prop.isLeft ? '30px' : '0')};
   border-bottom-left-radius: ${prop => (prop.isLeft ? '30px' : '0')};
   background-color: #cccccc;
-  color: white;
+  color: #f6f6f6;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   border-left: ${prop => (prop.isLeft ? '' : '3px solid #f6f6eb')};
 `

@@ -51,7 +51,7 @@ const LearningCard = styled.div`
   max-width: 680px;
   padding: ${prop => (prop.isExpanded ? '35px' : '35px 20px')};
   border: none;
-  color: white;
+  color: #f6f6f6;
   border-radius: 30px;
   background-color: ${prop => prop.backgroundColor};
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
@@ -79,7 +79,7 @@ const LearningCard = styled.div`
     li {
       padding: 3px 8px;
       border-radius: 10px;
-      background-color: white;
+      background-color: #f6f6f6;
       color: gray;
     }
   }
