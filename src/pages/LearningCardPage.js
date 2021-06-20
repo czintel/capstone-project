@@ -33,7 +33,6 @@ const PageWrapper = styled.section`
   width: 100%;
   max-width: 370px;
   margin: 0 auto;
-  padding: 20px;
   scroll-behavior: auto;
 `
 
