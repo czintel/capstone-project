@@ -1,17 +1,10 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 import LearningCard from '../components/LearningCard'
-import Button from '../components/Button'
+import data from '../data.json'
 
-LearningCardList.propTypes = {
-  data: PropTypes.array,
-  onClick: PropTypes.func,
-}
-
-export default function LearningCardList({ data, onNavigate }) {
+export default function LearningCardList() {
   return (
     <PageWrapper>
-      <Button onClick={onNavigate}>Quiz &gt;</Button>
       <CardWrapper>
         {data.emotions.map(({ name, description, tags, color, emId }) => (
           <LearningCard

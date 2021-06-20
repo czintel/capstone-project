@@ -1,17 +1,10 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 import QuizCard from '../components/QuizCard'
-import Button from '../components/Button'
+import data from '../data.json'
 
-QuizCardPage.propTypes = {
-  data: PropTypes.array,
-  onClick: PropTypes.func,
-}
-
-export default function QuizCardPage({ data, onNavigate }) {
+export default function QuizCardPage() {
   return (
     <PageWrapper>
-      <Button onClick={onNavigate}>&lt; Lernen</Button>
       {data.quiz.map(({ title, scenario, question, answers, qId }) => (
         <QuizCard
           key={qId}

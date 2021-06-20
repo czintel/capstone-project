@@ -2,28 +2,19 @@ import styled from 'styled-components/macro'
 import data from './data.json'
 import QuizCardPage from './pages/QuizCardPage'
 import LearningCardPage from './pages/LearningCardPage'
-import { useState } from 'react'
+import NavBar from './components/NavBar'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('learningCardPage')
-
   return (
     <>
-      <AppWrapper>
-        {currentPage === 'learningCardPage' && (
-          <LearningCardPage
-            onNavigate={() => setCurrentPage('quizCardPage')}
-            data={data}
-          />
-        )}
-        {currentPage === 'quizCardPage' && (
-          <QuizCardPage
-            onNavigate={() => setCurrentPage('learningCardPage')}
-            data={data}
-          />
-        )}
-        <Footer></Footer>
-      </AppWrapper>
+      <Router>
+        <AppWrapper data={data}>
+          <NavBar />
+          <Route path="/lernen" component={LearningCardPage} />
+          <Route path="/quiz" component={QuizCardPage} />
+        </AppWrapper>
+      </Router>
     </>
   )
 }
@@ -34,4 +25,20 @@ const AppWrapper = styled.section`
   padding: 20px;
   justify-content: center;
 `
-const Footer = styled.footer``
+
+{
+  /* <AppWrapper>
+{currentPage === 'learningCardPage' && (
+  <LearningCardPage
+    onNavigate={() => setCurrentPage('quizCardPage')}
+    data={data}
+  />
+)}
+{currentPage === 'quizCardPage' && (
+  <QuizCardPage
+    onNavigate={() => setCurrentPage('learningCardPage')}
+    data={data}
+  />
+)}
+</AppWrapper> */
+}
