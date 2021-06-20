@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
 import data from './data.json'
-import QuizCardPage from './pages/QuizCardPage'
-import LearningCardPage from './pages/LearningCardPage'
+import QuizPage from './pages/QuizPage'
+import LearningPage from './pages/LearningPage'
 import NavBar from './components/NavBar'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -11,8 +11,8 @@ function App() {
       <Router>
         <AppWrapper data={data}>
           <NavBar />
-          <Route path="/lernen" component={LearningCardPage} />
-          <Route path="/quiz" component={QuizCardPage} />
+          <Route path="/lernen" component={LearningPage} />
+          <Route path="/quiz" component={QuizPage} />
         </AppWrapper>
       </Router>
     </>
@@ -28,15 +28,15 @@ const AppWrapper = styled.section`
 
 {
   /* <AppWrapper>
-{currentPage === 'learningCardPage' && (
-  <LearningCardPage
-    onNavigate={() => setCurrentPage('quizCardPage')}
+{currentPage === 'LearningPage' && (
+  <LearningPage
+    onNavigate={() => setCurrentPage('QuizPage')}
     data={data}
   />
 )}
-{currentPage === 'quizCardPage' && (
-  <QuizCardPage
-    onNavigate={() => setCurrentPage('learningCardPage')}
+{currentPage === 'QuizPage' && (
+  <QuizPage
+    onNavigate={() => setCurrentPage('LearningPage')}
     data={data}
   />
 )}

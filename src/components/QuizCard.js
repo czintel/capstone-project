@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components/macro'
 import { useState } from 'react'
+
 QuizCard.propTypes = {
   onClick: PropTypes.func,
   isAnsweredCorrectly: PropTypes.bool,

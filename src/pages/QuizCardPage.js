@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 import QuizCard from '../components/QuizCard'
 import data from '../data.json'
 
-export default function QuizCardPage() {
+export default function QuizPage() {
   return (
     <PageWrapper>
       {data.quiz.map(({ title, scenario, question, answers, qId }) => (

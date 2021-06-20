@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react'
-import LearningCardPage from './LearningCardPage'
+import LearningPage from './LearningPage'
 
-describe('LearningCardPage', () => {
+describe('LearningPage', () => {
   it('renders', () => {
-    render(<LearningCardPage />)
-    expect(screen.getByText('LearningCardPage')).toBeInTheDocument()
+    render(<LearningPage />)
+    expect(screen.getByText('LearningPage')).toBeInTheDocument()
   })
 })
