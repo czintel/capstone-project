@@ -21,16 +21,17 @@ export default function LearningCardList() {
 }
 
 const PageWrapper = styled.section`
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   width: 100%;
   max-width: 370px;
-  margin: 0 auto;
-  scroll-behavior: auto;
 `
 
 const CardWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
+  justify-content: left;
   gap: 20px;
+  max-width: 330px;
 `

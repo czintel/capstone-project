@@ -1,29 +1,55 @@
 import styled from 'styled-components/macro'
-import NavButton from './NavButton'
+import { NavLink } from 'react-router-dom'
 
-export default function NavBar(onNavigate) {
+export default function NavBar() {
+  const active = {
+    fontWeight: '700',
+    backgroundColor: '#FFAF68',
+  }
+
   return (
     <NavBarWrapper>
-      <NavButton isLeft={true} onClick={onNavigate}>
+      <StyledLink to="/lernen" activeStyle={active} isLeft={true}>
         Lernen
-      </NavButton>
-      <NavDivider />
-      <NavButton isRight={true} onClick={onNavigate}>
+      </StyledLink>
+      <StyledLink to="/quiz" activeStyle={active} isRight={true}>
         Quiz
-      </NavButton>
+      </StyledLink>
     </NavBarWrapper>
   )
 }
 
-const NavBarWrapper = styled.section`
+const NavBarWrapper = styled.ul`
   display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
-  justify-content: space-evenly;
+  width: 330px;
+  position: fixed;
+  bottom: 0;
+  margin: 0 20px 20px;
+  padding-left: 0;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  transform: translateX(-20px);
 `
 
-const NavDivider = styled.div`
-  height: 50px;
-  width: 5px;
-  background: #f2f2f2;
+const StyledLink = styled(NavLink)`
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+  width: 100%;
+  text-decoration: none;
+  border-style: none;
+  font-weight: 400;
+  padding-left: ${prop => (prop.isLeft ? '10px' : '0')};
+  padding-right: ${prop => (prop.isRight ? '10px' : '0')};
+  border-top-right-radius: ${prop => (prop.isRight ? '30px' : '0')};
+  border-bottom-right-radius: ${prop => (prop.isRight ? '30px' : '0')};
+  border-top-left-radius: ${prop => (prop.isLeft ? '30px' : '0')};
+  border-bottom-left-radius: ${prop => (prop.isLeft ? '30px' : '0')};
+  background-color: #cccccc;
+  color: white;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  border-left: ${prop => (prop.isLeft ? '' : '3px solid #f6f6eb')};
 `

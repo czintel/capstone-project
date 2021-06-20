@@ -15,7 +15,7 @@ QuizCard.propTypes = {
   isClicked: PropTypes.bool,
 }
 export default function QuizCard({ title, scenario, question, answers }) {
-  const [bgColor, setBgColor] = useState('darkgray')
+  const [bgColor, setBgColor] = useState('#cccccc')
   const [selectedAnswer, setSelectedAnswer] = useState(null)
   const handleAnswerClick = (isCorrect, answer) => {
     const color = isCorrect ? '#99c140' : '#cc3232'
@@ -38,7 +38,7 @@ export default function QuizCard({ title, scenario, question, answers }) {
               }
               isCorrect={answer.isCorrect}
               bgColor={
-                answer.answerText === selectedAnswer ? bgColor : 'darkgray'
+                answer.answerText === selectedAnswer ? bgColor : '#cccccc'
               }
             >
               {answer.answerText}

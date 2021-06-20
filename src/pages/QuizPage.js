@@ -23,7 +23,7 @@ const PageWrapper = styled.section`
   flex-wrap: wrap;
   gap: 20px;
   width: 100%;
-  max-width: 370px;
+  max-width: 330px;
   margin: 0 auto;
   scroll-behavior: auto;
 `

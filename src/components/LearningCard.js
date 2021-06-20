@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 import ButtonExpansion from './ButtonExpansion'
 import { useState } from 'react'
-import GlobalStyle from '../GlobalStyle'
 
 Card.propTypes = {
   onClick: PropTypes.func,
@@ -18,7 +17,6 @@ export default function Card({ name, description, tags, color }) {
 
   return (
     <>
-      <GlobalStyle />
       <LearningCard isExpanded={isExpanded} backgroundColor={color}>
         <h2 isExpanded={isExpanded}>{name}</h2>
         {isExpanded && (
