@@ -60,6 +60,7 @@
     "@storybook/node-logger": "^6.2.9",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.9",
+    "file-loader": "^6.2.0",
     "prop-type": "0.0.1"
   }
 }

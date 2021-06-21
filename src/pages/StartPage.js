@@ -12,7 +12,12 @@ export default function StartPage() {
 }
 
 const PageWrapper = styled.section`
-  margin-top: 20px;
-  text-align: center;
   color: #897869;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 330px;
+  margin: 0 auto;
 `

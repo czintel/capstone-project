@@ -14,33 +14,24 @@ LearningCardList.propTypes = {
 export default function LearningCardList() {
   return (
     <PageWrapper>
-      <CardWrapper>
-        {data.emotions.map(({ name, description, tags, color, emId }) => (
-          <LearningCard
-            key={emId}
-            name={name}
-            description={description}
-            tags={tags}
-            color={color}
-          />
-        ))}
-      </CardWrapper>
+      {data.emotions.map(({ name, description, tags, color, emId }) => (
+        <LearningCard
+          key={emId}
+          name={name}
+          description={description}
+          tags={tags}
+          color={color}
+        />
+      ))}
     </PageWrapper>
   )
 }
 
 const PageWrapper = styled.section`
+  padding: 20px 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
-  max-width: 370px;
-`
-
-const CardWrapper = styled.section`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
   gap: 20px;
   max-width: 330px;
+  margin: 0 auto;
 `

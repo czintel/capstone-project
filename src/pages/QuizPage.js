@@ -28,11 +28,11 @@ export default function QuizPage() {
 }
 
 const PageWrapper = styled.section`
+  padding: 20px 0;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   width: 100%;
   max-width: 330px;
   margin: 0 auto;
-  scroll-behavior: auto;
 `
