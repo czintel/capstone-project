@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 
-export default function Home() {
+export default function StartPage() {
   return (
     <PageWrapper>
       <h2>Willkommen zu AppName!</h2>

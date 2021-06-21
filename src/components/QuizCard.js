@@ -3,8 +3,6 @@ import styled, { css } from 'styled-components/macro'
 import { useState } from 'react'
 
 QuizCard.propTypes = {
-  onClick: PropTypes.func,
-  isAnsweredCorrectly: PropTypes.bool,
   isCorrect: PropTypes.bool,
   title: PropTypes.string,
   scenario: PropTypes.string,
@@ -12,8 +10,9 @@ QuizCard.propTypes = {
   answers: PropTypes.array,
   answer: PropTypes.string,
   className: PropTypes.string,
-  isClicked: PropTypes.bool,
+  bgColor: PropTypes.string,
 }
+
 export default function QuizCard({ title, scenario, question, answers }) {
   const [bgColor, setBgColor] = useState('darkgray')
   const [selectedAnswer, setSelectedAnswer] = useState(null)

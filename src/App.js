@@ -1,10 +1,10 @@
 import styled from 'styled-components/macro'
 import data from './data.json'
-import Home from './pages/Home'
 import QuizPage from './pages/QuizPage'
 import LearningPage from './pages/LearningPage'
 import NavBar from './components/NavBar'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import StartPage from './pages/StartPage'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Router>
         <AppWrapper data={data}>
           <Switch>
-            <Route path="/" exact component={Home} />
+            <Route path="/start" component={StartPage} />
             <Route path="/lernen" component={LearningPage} />
             <Route path="/quiz" component={QuizPage} />
           </Switch>

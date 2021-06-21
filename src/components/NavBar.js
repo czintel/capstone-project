@@ -9,7 +9,10 @@ export default function NavBar() {
 
   return (
     <NavBarWrapper>
-      <StyledLink to="/lernen" activeStyle={active} isLeft={true}>
+      <StyledLink to="/start" activeStyle={active} isLeft={true}>
+        Start
+      </StyledLink>
+      <StyledLink to="/lernen" activeStyle={active}>
         Lernen
       </StyledLink>
       <StyledLink to="/quiz" activeStyle={active} isRight={true}>
@@ -49,8 +52,8 @@ const StyledLink = styled(NavLink)`
   border-bottom-right-radius: ${prop => (prop.isRight ? '30px' : '0')};
   border-top-left-radius: ${prop => (prop.isLeft ? '30px' : '0')};
   border-bottom-left-radius: ${prop => (prop.isLeft ? '30px' : '0')};
-  background-color: #cccccc;
+  background-color: #b7bcb6;
   color: #f6f6f6;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-  border-left: ${prop => (prop.isLeft ? '' : '3px solid #f6f6eb')};
+  z-index: 1000;
 `

@@ -1,6 +1,15 @@
 import styled from 'styled-components/macro'
+import PropTypes from 'prop-types'
 import LearningCard from '../components/LearningCard'
 import data from '../data.json'
+
+LearningCardList.propTypes = {
+  name: PropTypes.string,
+  tags: PropTypes.array,
+  color: PropTypes.string,
+  key: PropTypes.number,
+  description: PropTypes.string,
+}
 
 export default function LearningCardList() {
   return (

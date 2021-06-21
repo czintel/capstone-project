@@ -4,8 +4,6 @@ import ButtonExpansion from './ButtonExpansion'
 import { useState } from 'react'
 
 Card.propTypes = {
-  onClick: PropTypes.func,
-  isExpanded: PropTypes.bool,
   name: PropTypes.string,
   description: PropTypes.string,
   tags: PropTypes.array,
