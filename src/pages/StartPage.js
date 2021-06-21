@@ -13,11 +13,11 @@ export default function StartPage() {
 
 const PageWrapper = styled.section`
   color: #897869;
-  padding-top: 20px;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   width: 100%;
-  max-width: 330px;
+  max-width: 375px;
   margin: 0 auto;
 `

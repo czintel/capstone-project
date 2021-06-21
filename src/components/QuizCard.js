@@ -51,7 +51,7 @@ export default function QuizCard({ title, scenario, question, answers }) {
 const Card = styled.div`
   display: grid;
   gap: 30px;
-  max-width: 670px;
+  max-width: 330px;
   line-height: 1;
   background-color: #f6f6f6;
   padding: 0 0 40px;
@@ -75,6 +75,7 @@ const Card = styled.div`
   p {
     padding: 0 40px;
     text-align: left;
+    font-size: 1rem;
     line-height: 1.4;
   }
 `

@@ -5,14 +5,16 @@ import LearningPage from './pages/LearningPage'
 import NavBar from './components/NavBar'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import StartPage from './pages/StartPage'
-import Logo from './assets/Logo.svg'
+import AppLogo from './assets/Logo.svg'
 
 function App() {
   return (
     <>
       <Router>
         <Wrapper data={data}>
-          <Header>{Logo}</Header>
+          <Header>
+            <Logo src={AppLogo} alt="App Logo" />
+          </Header>
           <Body>
             <Switch>
               <Route path="/start" component={StartPage} />
@@ -34,16 +36,18 @@ export default App
 const Wrapper = styled.section`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10vh 80vh 10vh;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas:
     'header'
     'main'
     'footer';
   justify-content: center;
+  justify-items: center;
   overflow: visible;
 `
 
 const Header = styled.header`
+  margin-top: 20px;
   grid-area: header;
   justify-content: center;
 `
@@ -55,7 +59,13 @@ const Body = styled.main`
 
 const Footer = styled.footer`
   grid-area: footer;
-  justify-self: center;
-  align-self: center;
-  margin: 0 auto;
+  margin-bottom: 20px;
+  position: fixed;
+  bottom: 0;
+`
+const Logo = styled.img`
+  height: 70px;
+  svg {
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  }
 `
