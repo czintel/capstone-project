@@ -50,11 +50,11 @@ export default function QuizCard({ title, scenario, question, answers }) {
 }
 const Card = styled.div`
   display: grid;
-  gap: 30px;
+  gap: 25px;
   max-width: 330px;
   line-height: 1;
   background-color: #f6f6f6;
-  padding: 0 0 40px;
+  padding: 0 0 30px;
   border-radius: 30px;
   color: gray;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
@@ -69,7 +69,8 @@ const Card = styled.div`
   }
   h3 {
     color: #565656;
-    padding: 0 40px;
+    padding: 0 30px;
+    font-size: 1.1rem;
     line-height: 1.4;
   }
   p {
@@ -82,7 +83,7 @@ const Card = styled.div`
 const AnswerSection = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   padding-left: 40px;
   padding-right: 50px;
   list-style-type: none;
