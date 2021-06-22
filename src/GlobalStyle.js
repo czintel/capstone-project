@@ -8,11 +8,11 @@ export default createGlobalStyle`
   }
  
   body {
-    margin: 0;
+    height: 100%;
     font-family: sans-serif;
     font-size: 112.5%;
     line-height: 1.4;
-    background: #f6f6eb;
+    background: #f1ece5;
     background-repeat: repeat;
     background-size: cover;
     background-attachment: fixed;}

@@ -1,17 +1,19 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 import QuizCard from '../components/QuizCard'
-import Button from '../components/Button'
+import PropTypes from 'prop-types'
+import data from '../data.json'
 
-QuizCardPage.propTypes = {
-  data: PropTypes.array,
-  onClick: PropTypes.func,
+QuizPage.propTypes = {
+  key: PropTypes.number,
+  title: PropTypes.string,
+  scenario: PropTypes.string,
+  question: PropTypes.string,
+  answers: PropTypes.array,
 }
 
-export default function QuizCardPage({ data, onNavigate }) {
+export default function QuizPage() {
   return (
     <PageWrapper>
-      <Button onClick={onNavigate}>&lt; Lernen</Button>
       {data.quiz.map(({ title, scenario, question, answers, qId }) => (
         <QuizCard
           key={qId}
@@ -28,10 +30,10 @@ export default function QuizCardPage({ data, onNavigate }) {
 const PageWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
+  padding-top: 20px;
+  justify-content: center;
   gap: 20px;
   width: 100%;
-  max-width: 370px;
+  max-width: 375px;
   margin: 0 auto;
-  padding: 20px;
-  scroll-behavior: auto;
 `

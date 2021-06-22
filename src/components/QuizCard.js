@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components/macro'
 import { useState } from 'react'
+
 QuizCard.propTypes = {
-  onClick: PropTypes.func,
-  isAnsweredCorrectly: PropTypes.bool,
   isCorrect: PropTypes.bool,
   title: PropTypes.string,
   scenario: PropTypes.string,
@@ -11,8 +10,9 @@ QuizCard.propTypes = {
   answers: PropTypes.array,
   answer: PropTypes.string,
   className: PropTypes.string,
-  isClicked: PropTypes.bool,
+  bgColor: PropTypes.string,
 }
+
 export default function QuizCard({ title, scenario, question, answers }) {
   const [bgColor, setBgColor] = useState('darkgray')
   const [selectedAnswer, setSelectedAnswer] = useState(null)
@@ -37,7 +37,7 @@ export default function QuizCard({ title, scenario, question, answers }) {
               }
               isCorrect={answer.isCorrect}
               bgColor={
-                answer.answerText === selectedAnswer ? bgColor : 'darkgray'
+                answer.answerText === selectedAnswer ? bgColor : '#cccccc'
               }
             >
               {answer.answerText}
@@ -50,11 +50,11 @@ export default function QuizCard({ title, scenario, question, answers }) {
 }
 const Card = styled.div`
   display: grid;
-  gap: 30px;
-  max-width: 670px;
+  gap: 25px;
+  max-width: 330px;
   line-height: 1;
-  background-color: white;
-  padding: 0 0 40px;
+  background-color: #f6f6f6;
+  padding: 0 0 30px;
   border-radius: 30px;
   color: gray;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
@@ -62,26 +62,28 @@ const Card = styled.div`
 
   h2 {
     background-color: ${props => props.bgColor};
-    color: white;
+    color: #f6f6f6;
     font-size: 1.8rem;
     padding: 20px 20px 15px;
     border-radius: 30px 30px 0 0;
   }
   h3 {
     color: #565656;
-    padding: 0 40px;
+    padding: 0 30px;
+    font-size: 1.1rem;
     line-height: 1.4;
   }
   p {
     padding: 0 40px;
     text-align: left;
+    font-size: 1rem;
     line-height: 1.4;
   }
 `
 const AnswerSection = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
   padding-left: 40px;
   padding-right: 50px;
   list-style-type: none;
@@ -100,6 +102,6 @@ const AnswerButton = styled.button`
     css`
       background-color: ${props.bgColor};
       border: 2px ${props.bgColor} solid;
-      color: white;
+      color: #f6f6f6;
     `}
 `

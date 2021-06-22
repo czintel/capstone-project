@@ -1,12 +1,12 @@
 import React from 'react'
-import LearningCardPage from './LearningCardPage'
+import LearningPage from './LearningPage'
 
 export default {
-  title: 'Pages/LearningCardPage',
-  component: LearningCardPage,
+  title: 'Pages/LearningPage',
+  component: LearningPage,
 }
 
-const Template = args => <LearningCardPage {...args} />
+const Template = args => <LearningPage {...args} />
 
 export const BasicEmotions = Template.bind({})
 BasicEmotions.args = {

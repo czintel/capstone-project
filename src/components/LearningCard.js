@@ -2,11 +2,8 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 import ButtonExpansion from './ButtonExpansion'
 import { useState } from 'react'
-import GlobalStyle from '../GlobalStyle'
 
 Card.propTypes = {
-  onClick: PropTypes.func,
-  isExpanded: PropTypes.bool,
   name: PropTypes.string,
   description: PropTypes.string,
   tags: PropTypes.array,
@@ -18,7 +15,6 @@ export default function Card({ name, description, tags, color }) {
 
   return (
     <>
-      <GlobalStyle />
       <LearningCard isExpanded={isExpanded} backgroundColor={color}>
         <h2 isExpanded={isExpanded}>{name}</h2>
         {isExpanded && (
@@ -53,7 +49,7 @@ const LearningCard = styled.div`
   max-width: 680px;
   padding: ${prop => (prop.isExpanded ? '35px' : '35px 20px')};
   border: none;
-  color: white;
+  color: #f6f6f6;
   border-radius: 30px;
   background-color: ${prop => prop.backgroundColor};
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
@@ -81,7 +77,7 @@ const LearningCard = styled.div`
     li {
       padding: 3px 8px;
       border-radius: 10px;
-      background-color: white;
+      background-color: #f6f6f6;
       color: gray;
     }
   }

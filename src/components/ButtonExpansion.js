@@ -22,7 +22,7 @@ const ButtonExpansion = styled.button`
   font-weight: 700;
   border-radius: 50%;
   border: none;
-  background-color: white;
+  background-color: #f6f6f6;
   color: gray;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   justify-self: center;

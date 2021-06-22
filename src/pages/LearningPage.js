@@ -1,17 +1,19 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
+import PropTypes from 'prop-types'
 import LearningCard from '../components/LearningCard'
-import Button from '../components/Button'
+import data from '../data.json'
 
 LearningCardList.propTypes = {
-  data: PropTypes.array,
-  onClick: PropTypes.func,
+  name: PropTypes.string,
+  tags: PropTypes.array,
+  color: PropTypes.string,
+  key: PropTypes.number,
+  description: PropTypes.string,
 }
 
-export default function LearningCardList({ data, onNavigate }) {
+export default function LearningCardList() {
   return (
     <PageWrapper>
-      <Button onClick={onNavigate}>Quiz &gt;</Button>
       <CardWrapper>
         {data.emotions.map(({ name, description, tags, color, emId }) => (
           <LearningCard
@@ -28,17 +30,16 @@ export default function LearningCardList({ data, onNavigate }) {
 }
 
 const PageWrapper = styled.section`
-  display: grid;
-  gap: 20px;
-  width: 100%;
-  max-width: 370px;
+  padding: 0 20px;
+  max-width: 375px;
   margin: 0 auto;
-  padding: 20px;
-  scroll-behavior: auto;
 `
 
 const CardWrapper = styled.section`
+  margin-top: 20px;
+  padding-left: 3px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: left;
   gap: 20px;
 `

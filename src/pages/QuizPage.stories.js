@@ -1,12 +1,12 @@
 import React from 'react'
-import QuizCardPage from './QuizCardPage'
+import QuizPage from './QuizPage'
 
 export default {
-  title: 'Pages/QuizCardPage',
-  component: QuizCardPage,
+  title: 'Pages/QuizPage',
+  component: QuizPage,
 }
 
-const Template = args => <QuizCardPage {...args} />
+const Template = args => <QuizPage {...args} />
 
 export const DefaultLearningCard = Template.bind({})
 DefaultLearningCard.args = [
