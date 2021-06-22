@@ -10,8 +10,8 @@ export default function StartPage(onSubmit) {
     <PageWrapper>
       <h2>Willkommen zu Hmpf!</h2>
       <span>Schön, dass du da bist 😇</span>
-      <form>
-        <label onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
+        <label>
           Wie ist dein Name?
           <input name="name" type="text" placeholder="Dein Name" />
         </label>
@@ -22,10 +22,11 @@ export default function StartPage(onSubmit) {
   function handleSubmit(event) {
     event.preventDefault()
     const form = event.target
-    const input = form.elements.name
-    onSubmit(input.value)
+    const nameInput = form.elements.name
+    const userName = nameInput.value
+    localStorage.setItem('user name', userName)
     form.reset()
-    input.focus()
+    nameInput.focus()
   }
 }
 
