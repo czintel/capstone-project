@@ -47,7 +47,6 @@ const Wrapper = styled.section`
 `
 
 const Header = styled.header`
-  position: sticky;
   margin-top: 20px;
   grid-area: header;
   justify-content: center;
