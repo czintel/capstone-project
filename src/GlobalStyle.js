@@ -12,7 +12,7 @@ export default createGlobalStyle`
     font-family: sans-serif;
     font-size: 112.5%;
     line-height: 1.4;
-    background-color: #fffef2;
+    background-color: #fffff7;
     background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png")
     }
     `
