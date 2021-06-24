@@ -24,6 +24,7 @@ const StyledButton = styled.button`
   justify-self: end;
   border: none;
   background-color: darkgray;
+  background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   color: #f6f6f6;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 `

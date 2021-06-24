@@ -48,6 +48,7 @@ const StyledLink = styled(NavLink)`
   text-decoration: none;
   border-style: none;
   font-weight: 400;
+  background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   padding-left: ${prop => (prop.isLeft ? '10px' : '0')};
   padding-right: ${prop => (prop.isRight ? '10px' : '0')};
   border-top-right-radius: ${prop => (prop.isRight ? '30px' : '0')};
