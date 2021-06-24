@@ -10,33 +10,29 @@ HomePage.propTypes = {
 export default function HomePage(onSubmit) {
   return (
     <PageWrapper>
-      <h2>Willkommen zu Hmpf!</h2>
-      <p>
-        Schön, dass du da bist! 😇
-        <br />
-        <br />
-        <strong>
-          <em>Hmpf!</em>
-        </strong>{' '}
-        hilft dir, dich und deine Gefühle besser zu verstehen. Oft überkommen
-        uns unsere Gefühle, wir werden wütend, weinen und wissen nicht so recht
-        warum es uns gerade so geht wie es uns geht.
-        <br />
-        <br />
-        Lass{' '}
-        <strong>
-          <em>Hmpf!</em>
-        </strong>{' '}
-        dir genau in solchen Momenten helfen.
-      </p>
-      <form onSubmit={handleSubmit}>
-        <Label>
-          Wie ist dein Name?
-          <input name="name" type="text" placeholder="Dein Name" />
+      <ContentWrapper>
+        <h2>Willkommen zu Hmpf!</h2>
+        <p>
+          Schön, dass du da bist! 😇
           <br />
-          <GoButton>Los geht's!</GoButton>
-        </Label>
-      </form>
+          <br />
+          <strong>
+            <em>Hmpf!</em>
+          </strong>{' '}
+          hilft dir, dich und deine Gefühle besser zu verstehen. Oft überkommen
+          uns unsere Gefühle, wir werden wütend, weinen und wissen nicht so
+          recht warum es uns gerade so geht wie es uns geht.
+          <br /> <br />
+        </p>
+        <form onSubmit={handleSubmit}>
+          <Label>
+            Wie ist dein Name?
+            <input name="name" type="text" placeholder="Dein Name" />
+            <br />
+            <GoButton>Los geht's!</GoButton>
+          </Label>
+        </form>
+      </ContentWrapper>
     </PageWrapper>
   )
 
@@ -53,13 +49,23 @@ export default function HomePage(onSubmit) {
 
 const PageWrapper = styled.section`
   color: #897869;
-  padding: 40px;
   display: flex;
+  padding: 20px;
   flex-direction: column;
   gap: 20px;
   width: 100%;
   max-width: 375px;
   margin: 0 auto;
+`
+
+const ContentWrapper = styled.section`
+  background-color: #fffcfd;
+  background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
+  color: #897869;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
 `
 
 const GoButton = styled(Button)`

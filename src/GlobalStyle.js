@@ -8,11 +8,10 @@ export default createGlobalStyle`
   }
  
   body {
-    height: 100%;
+    height: 100%;   
     font-family: sans-serif;
     font-size: 112.5%;
     line-height: 1.4;
     background-color: #fffef2;
-    background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
-
-`
+    background-image: url("https://www.transparenttextures.com/patterns/ecailles.png");
+  }`

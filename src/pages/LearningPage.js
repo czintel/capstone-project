@@ -56,8 +56,10 @@ const CardWrapper = styled.section`
 `
 
 const Welcome = styled.section`
-  background: #f6f6f6;
+  background-color: #fffcfd;
+  background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   color: #897869;
   padding: 30px;
   border-radius: 30px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 `

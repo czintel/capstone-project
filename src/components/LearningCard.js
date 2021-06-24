@@ -52,6 +52,7 @@ const LearningCard = styled.div`
   color: #f6f6f6;
   border-radius: 30px;
   background-color: ${prop => prop.backgroundColor};
+  background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 
   h2 {
