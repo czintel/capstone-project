@@ -53,7 +53,7 @@ const LearningCard = styled.div`
   border-radius: 30px;
   background-color: ${prop => prop.backgroundColor};
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
 
   h2 {
     font-size: ${prop => (prop.isExpanded ? '3rem' : '1.6rem')};

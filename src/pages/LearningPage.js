@@ -65,5 +65,5 @@ const Welcome = styled.section`
   color: #897869;
   padding: 30px;
   border-radius: 30px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
 `

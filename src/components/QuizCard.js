@@ -58,7 +58,7 @@ const Card = styled.div`
   padding: 0 0 30px;
   border-radius: 30px;
   color: gray;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
   text-align: center;
 
   h2 {
