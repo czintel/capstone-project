@@ -16,7 +16,7 @@ export default function NavBar() {
 
   return (
     <Navigation>
-      <StyledLink to="/start" activeStyle={active} isLeft={true}>
+      <StyledLink to="/home" activeStyle={active} isLeft={true}>
         Start
       </StyledLink>
       <StyledLink to="/lernen" activeStyle={active}>

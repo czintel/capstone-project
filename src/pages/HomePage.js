@@ -2,12 +2,12 @@ import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
 import Button from '../components/Button'
 
-StartPage.propTypes = {
+HomePage.propTypes = {
   onSubmit: PropTypes.func,
   onClick: PropTypes.func,
 }
 
-export default function StartPage(onSubmit) {
+export default function HomePage(onSubmit) {
   return (
     <PageWrapper>
       <h2>Willkommen zu Hmpf!</h2>

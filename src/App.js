@@ -4,7 +4,7 @@ import QuizPage from './pages/QuizPage'
 import LearningPage from './pages/LearningPage'
 import NavBar from './components/NavBar'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import StartPage from './pages/StartPage'
+import HomePage from './pages/HomePage'
 import AppLogo from './assets/Logo.svg'
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           </Header>
           <Body>
             <Switch>
-              <Route path="/" component={StartPage} />
+              <Route exact path="/" component={HomePage} />
               <Route path="/lernen" component={LearningPage} />
               <Route path="/quiz" component={QuizPage} />
             </Switch>
