@@ -53,7 +53,8 @@ const Card = styled.div`
   gap: 25px;
   max-width: 330px;
   line-height: 1;
-  background-color: #f6f6f6;
+  background-color: #fffcfd;
+  background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   padding: 0 0 30px;
   border-radius: 30px;
   color: gray;
@@ -62,6 +63,7 @@ const Card = styled.div`
 
   h2 {
     background-color: ${props => props.bgColor};
+    background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
     color: #f6f6f6;
     font-size: 1.8rem;
     padding: 20px 20px 15px;
@@ -93,15 +95,15 @@ const AnswerButton = styled.button`
   scale: 100%;
   font-size: 0.9rem;
   line-height: 1;
-  padding: 5px 10px 5px;
-  border-radius: 15px;
-  border: 2px gray solid;
+  padding: 7px 10px;
+  border-radius: 20px;
+  border: none;
   color: gray;
   ${props =>
     props.bgColor &&
     css`
       background-color: ${props.bgColor};
-      border: 2px ${props.bgColor} solid;
       color: #f6f6f6;
+      background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
     `}
 `

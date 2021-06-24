@@ -20,7 +20,7 @@ export default function LearningCardList(userName) {
       <Welcome>
         <h3>Hallo {nameOfUser}!</h3>
         <p>
-          <strong> Willkommen im Lernbereich von Hpmf!</strong>
+          <strong> Willkommen im Lernbereich von Hpmf! </strong>
           Klicke auf eine Themenkarte, die dich interessiert lies dir die Texte
           aufmerksam durch, um ein echter Emotions-Profi zu werden!
         </p>

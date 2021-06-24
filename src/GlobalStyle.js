@@ -12,8 +12,7 @@ export default createGlobalStyle`
     font-family: sans-serif;
     font-size: 112.5%;
     line-height: 1.4;
-    background: #f1ece5;
-    background-repeat: repeat;
-    background-size: cover;
-    background-attachment: fixed;}
+    background-color: #fffef2;
+    background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
+
 `
