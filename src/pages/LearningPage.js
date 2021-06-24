@@ -41,9 +41,13 @@ export default function LearningCardList(userName) {
 }
 
 const PageWrapper = styled.section`
-  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
   max-width: 375px;
   margin: 0 auto;
+  font-size: 1rem;
 `
 
 const CardWrapper = styled.section`

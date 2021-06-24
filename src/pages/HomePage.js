@@ -50,9 +50,9 @@ export default function HomePage(onSubmit) {
 const PageWrapper = styled.section`
   color: #897869;
   display: flex;
+  gap: 20px;
   padding: 20px;
   flex-direction: column;
-  gap: 20px;
   width: 100%;
   max-width: 375px;
   margin: 0 auto;
