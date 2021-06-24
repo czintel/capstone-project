@@ -17,7 +17,7 @@ function App() {
           </Header>
           <Body>
             <Switch>
-              <Route path="/start" component={StartPage} />
+              <Route path="/" component={StartPage} />
               <Route path="/lernen" component={LearningPage} />
               <Route path="/quiz" component={QuizPage} />
             </Switch>
