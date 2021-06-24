@@ -26,7 +26,7 @@ export default function HomePage(onSubmit) {
         </p>
         <form onSubmit={handleSubmit}>
           <Label>
-            Wie ist dein Name?
+            <strong>Wie ist dein Name?</strong>
             <input name="name" type="text" placeholder="Dein Name" />
             <br />
             <GoButton>Los geht's!</GoButton>
