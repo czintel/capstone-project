@@ -3,7 +3,12 @@ import data from './data.json'
 import QuizPage from './pages/QuizPage'
 import LearningPage from './pages/LearningPage'
 import NavBar from './components/NavBar'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import AppLogo from './assets/Logo.svg'
 
@@ -17,7 +22,10 @@ function App() {
           </Header>
           <Body>
             <Switch>
-              <Route exact path="/" component={HomePage} />
+              <Route exact path="/">
+                <Redirect to="/home" />
+              </Route>
+              <Route path="/home" component={HomePage} />
               <Route path="/lernen" component={LearningPage} />
               <Route path="/quiz" component={QuizPage} />
             </Switch>
