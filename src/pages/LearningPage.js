@@ -9,11 +9,22 @@ LearningCardList.propTypes = {
   color: PropTypes.string,
   key: PropTypes.number,
   description: PropTypes.string,
+  nameOfUser: PropTypes.string,
 }
 
-export default function LearningCardList() {
+export default function LearningCardList(userName) {
+  const nameOfUser = localStorage.getItem(userName)
+
   return (
     <PageWrapper>
+      <Welcome>
+        <h3>Hallo {nameOfUser}!</h3>
+        <p>
+          <strong> Willkommen im Lernbereich von Hpmf!</strong>
+          Klicke auf eine Themenkarte, die dich interessiert lies dir die Texte
+          aufmerksam durch, um ein echter Emotions-Profi zu werden!
+        </p>
+      </Welcome>
       <CardWrapper>
         {data.emotions.map(({ name, description, tags, color, emId }) => (
           <LearningCard
@@ -42,4 +53,11 @@ const CardWrapper = styled.section`
   flex-wrap: wrap;
   justify-content: left;
   gap: 20px;
+`
+
+const Welcome = styled.section`
+  background: #f6f6f6;
+  color: #897869;
+  padding: 30px;
+  border-radius: 30px;
 `
