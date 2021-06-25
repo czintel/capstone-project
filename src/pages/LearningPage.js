@@ -4,16 +4,12 @@ import LearningCard from '../components/LearningCard'
 import data from '../data.json'
 
 LearningCardList.propTypes = {
-  name: PropTypes.string,
-  tags: PropTypes.array,
-  color: PropTypes.string,
-  key: PropTypes.number,
-  description: PropTypes.string,
-  nameOfUser: PropTypes.string,
+  userName: PropTypes.string,
 }
 
-export default function LearningCardList(userName) {
+export default function LearningCardList({ userName }) {
   const nameOfUser = localStorage.getItem(userName)
+  console.log(nameOfUser)
 
   return (
     <PageWrapper>
@@ -25,6 +21,7 @@ export default function LearningCardList(userName) {
           aufmerksam durch, um ein echter Emotions-Profi zu werden!
         </p>
       </Welcome>
+
       <CardWrapper>
         {data.emotions.map(({ name, description, tags, color, emId }) => (
           <LearningCard
@@ -44,18 +41,15 @@ const PageWrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px;
-  max-width: 375px;
-  margin: 0 auto;
   font-size: 1rem;
 `
 
 const CardWrapper = styled.section`
-  margin-top: 20px;
-  padding-left: 3px;
+  margin: 0 20px;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
   gap: 20px;
 `
 
@@ -63,6 +57,7 @@ const Welcome = styled.section`
   background-color: #fffcfd;
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   color: #897869;
+  margin: 20px 40px;
   padding: 30px;
   border-radius: 30px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);

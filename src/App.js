@@ -1,41 +1,40 @@
 import styled from 'styled-components/macro'
-import data from './data.json'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { useRef, useState } from 'react'
+import HomePage from './pages/HomePage'
 import QuizPage from './pages/QuizPage'
 import LearningPage from './pages/LearningPage'
+// import ScrollToTop from './components/ScrollToTop'
 import NavBar from './components/NavBar'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from 'react-router-dom'
-import HomePage from './pages/HomePage'
-import AppLogo from './assets/Logo.svg'
+import appLogo from './assets/Logo.svg'
 
 function App() {
+  const mainRef = useRef(null)
+  const [userName, setUserName] = useState('')
+
   return (
-    <>
-      <Router>
-        <Wrapper data={data}>
-          <Header>
-            <Logo src={AppLogo} alt="App Logo" />
-          </Header>
-          <Body>
-            <Switch>
-              <Route exact path="/">
-                <Redirect to="/home" />
-              </Route>
-              <Route path="/home" component={HomePage} />
-              <Route path="/lernen" component={LearningPage} />
-              <Route path="/quiz" component={QuizPage} />
-            </Switch>
-          </Body>
-          <Footer>
-            <NavBar />
-          </Footer>
-        </Wrapper>
-      </Router>
-    </>
+    <Router>
+      <Wrapper>
+        {/* <ScrollToTop elementToScrollUp={mainRef} /> */}
+        <Header>
+          <Logo src={appLogo} alt="App Logo" />
+        </Header>
+        <Main ref={mainRef}>
+          <Switch>
+            <Route exact path="/">
+              <HomePage onSubmit={userName => setUserName(userName)} />
+            </Route>
+            <Route path="/lernen">
+              <LearningPage userName={userName} />
+            </Route>
+            <Route path="/quiz" component={QuizPage} />
+          </Switch>
+        </Main>
+        <Footer>
+          <NavBar />
+        </Footer>
+      </Wrapper>
+    </Router>
   )
 }
 
@@ -51,7 +50,10 @@ const Wrapper = styled.section`
     'footer';
   justify-content: center;
   justify-items: center;
+  justify-self: center;
+  margin: 0 auto;
   overflow: visible;
+  max-width: 840px;
 `
 
 const Header = styled.header`
@@ -60,7 +62,7 @@ const Header = styled.header`
   justify-content: center;
 `
 
-const Body = styled.main`
+const Main = styled.main`
   grid-area: main;
   height: 80vh;
   align-content: center;
@@ -69,9 +71,10 @@ const Body = styled.main`
 
 const Footer = styled.footer`
   grid-area: footer;
-  margin-bottom: 20px;
   position: fixed;
-  bottom: 0;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
 `
 const Logo = styled.img`
   height: 70px;

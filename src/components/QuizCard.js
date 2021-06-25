@@ -3,14 +3,10 @@ import styled, { css } from 'styled-components/macro'
 import { useState } from 'react'
 
 QuizCard.propTypes = {
-  isCorrect: PropTypes.bool,
   title: PropTypes.string,
   scenario: PropTypes.string,
   question: PropTypes.string,
   answers: PropTypes.array,
-  answer: PropTypes.string,
-  className: PropTypes.string,
-  bgColor: PropTypes.string,
 }
 
 export default function QuizCard({ title, scenario, question, answers }) {
@@ -50,8 +46,9 @@ export default function QuizCard({ title, scenario, question, answers }) {
 }
 const Card = styled.div`
   display: grid;
-  gap: 25px;
-  max-width: 330px;
+  gap: 20px;
+  margin: 0 40px 20px;
+  width: 100%;
   line-height: 1;
   background-color: #fffcfd;
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');

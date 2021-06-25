@@ -2,9 +2,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
 
 Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
   children: PropTypes.node,
-  isExpanded: PropTypes.bool,
 }
 
 export default function Button({ children, ...props }) {
@@ -17,8 +15,8 @@ export default function Button({ children, ...props }) {
 
 const ButtonExpansion = styled.button`
   position: relative;
-  width: ${prop => (prop.isExpanded ? '50px' : '40px')};
-  height: ${prop => (prop.isExpanded ? '50px' : '40px')};
+  width: 40px;
+  height: 40px;
   font-weight: 700;
   border-radius: 50%;
   border: none;

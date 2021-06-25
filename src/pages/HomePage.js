@@ -1,43 +1,35 @@
 import styled from 'styled-components/macro'
-import PropTypes from 'prop-types'
 import Button from '../components/Button'
 
-HomePage.propTypes = {
-  onSubmit: PropTypes.func,
-  onClick: PropTypes.func,
-}
-
-export default function HomePage(onSubmit) {
+export default function HomePage() {
   return (
     <PageWrapper>
-      <ContentWrapper>
-        <h2>Willkommen zu Hmpf!</h2>
-        <p>
-          Schön, dass du da bist! 😇
+      <h2>Willkommen zu Hmpf!</h2>
+      <p>
+        Schön, dass du da bist! 😇
+        <br />
+        <br />
+        <strong>
+          <em>Hmpf!</em>
+        </strong>{' '}
+        hilft dir, dich und deine Gefühle besser zu verstehen. Oft überkommen
+        uns unsere Gefühle, wir werden wütend, weinen und wissen nicht so recht
+        warum es uns gerade so geht wie es uns geht.
+        <br /> <br />
+      </p>
+      <form onSubmit={handleSubmit}>
+        <Label>
+          <strong>Wie ist dein Name?</strong>
+          <input
+            name="name"
+            type="text"
+            placeholder="Dein Name"
+            autoComplete="off"
+          />
           <br />
-          <br />
-          <strong>
-            <em>Hmpf!</em>
-          </strong>{' '}
-          hilft dir, dich und deine Gefühle besser zu verstehen. Oft überkommen
-          uns unsere Gefühle, wir werden wütend, weinen und wissen nicht so
-          recht warum es uns gerade so geht wie es uns geht.
-          <br /> <br />
-        </p>
-        <form onSubmit={handleSubmit}>
-          <Label>
-            <strong>Wie ist dein Name?</strong>
-            <input
-              name="name"
-              type="text"
-              placeholder="Dein Name"
-              autoComplete="off"
-            />
-            <br />
-            <GoButton>Los geht's!</GoButton>
-          </Label>
-        </form>
-      </ContentWrapper>
+          <GoButton>Los geht's!</GoButton>
+        </Label>
+      </form>
     </PageWrapper>
   )
 
@@ -46,29 +38,22 @@ export default function HomePage(onSubmit) {
     const form = event.target
     const nameInput = form.elements.name
     const userName = nameInput.value
-    localStorage.setItem('user name', userName)
+    localStorage.setItem('currywurst', userName)
     form.reset()
     nameInput.focus()
   }
 }
 
 const PageWrapper = styled.section`
-  color: #897869;
   display: flex;
-  gap: 20px;
-  padding: 20px;
   flex-direction: column;
-  width: 100%;
-  max-width: 375px;
-  margin: 0 auto;
-`
-
-const ContentWrapper = styled.section`
+  gap: 20px;
   background-color: #fffcfd;
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   color: #897869;
-  padding: 30px;
   border-radius: 30px;
+  padding: 30px;
+  margin: 20px 40px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
   font-size: 1rem;
 `
