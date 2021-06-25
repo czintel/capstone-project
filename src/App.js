@@ -48,35 +48,39 @@ const Wrapper = styled.section`
     'header'
     'main'
     'footer';
-  justify-content: center;
-  justify-items: center;
-  justify-self: center;
   margin: 0 auto;
-  overflow: visible;
+  width: auto;
   max-width: 840px;
 `
 
 const Header = styled.header`
-  margin-top: 20px;
+  position: fixed;
+  left: 20px;
+  right: 20px;
   grid-area: header;
-  justify-content: center;
+  text-align: center;
+  padding-top: 20px;
+  background-color: #fffff7;
+  background-image: url('https://www.transparenttextures.com/patterns/notebook-dark.png');
 `
 
 const Main = styled.main`
+  padding-top: 100px;
+  padding-bottom: 70px;
   grid-area: main;
-  height: 80vh;
-  align-content: center;
-  overflow: auto;
 `
 
 const Footer = styled.footer`
   grid-area: footer;
   position: fixed;
-  bottom: 20px;
   left: 20px;
   right: 20px;
+  bottom: 20px;
 `
 const Logo = styled.img`
+  justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
   height: 70px;
   svg {
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));

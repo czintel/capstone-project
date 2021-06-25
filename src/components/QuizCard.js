@@ -89,7 +89,6 @@ const AnswerSection = styled.div`
   justify-content: center;
 `
 const AnswerButton = styled.button`
-  scale: 100%;
   font-size: 0.9rem;
   line-height: 1;
   padding: 7px 10px;
