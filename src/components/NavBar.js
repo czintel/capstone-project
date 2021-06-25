@@ -31,7 +31,7 @@ const Navigation = styled.ul`
   list-style: none;
   border-radius: 30px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
-  max-width: 800px;
+  max-width: 400px;
   margin: 0 auto;
 `
 
