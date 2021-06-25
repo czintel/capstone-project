@@ -66,7 +66,7 @@ const Header = styled.header`
 
 const Main = styled.main`
   padding-top: 100px;
-  padding-bottom: 70px;
+  padding-bottom: 100px;
   grid-area: main;
 `
 
