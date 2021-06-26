@@ -14,33 +14,43 @@ function App() {
 
   return (
     <Router>
-      <Wrapper>
+      <AppGrid>
         {/* <ScrollToTop elementToScrollUp={mainRef} /> */}
         <Header>
           <Logo src={appLogo} alt="App Logo" />
         </Header>
+
         <Main ref={mainRef}>
           <Switch>
             <Route exact path="/">
-              <HomePage onSubmit={userName => setUserName(userName)} />
+              <HomePage onSubmit={handleSubmit} />
             </Route>
+
             <Route path="/lernen">
               <LearningPage userName={userName} />
             </Route>
-            <Route path="/quiz" component={QuizPage} />
+
+            <Route path="/quiz">
+              <QuizPage />
+            </Route>
           </Switch>
         </Main>
+
         <Footer>
           <NavBar />
         </Footer>
-      </Wrapper>
+      </AppGrid>
     </Router>
   )
+
+  function handleSubmit({ userName }) {
+    setUserName(userName)
+  }
 }
 
 export default App
 
-const Wrapper = styled.section`
+const AppGrid = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;

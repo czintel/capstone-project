@@ -1,8 +1,13 @@
 import styled from 'styled-components/macro'
+import PropTypes from 'prop-types'
 import LabeledInput from '../components/LabeledInput'
 import { NavLink } from 'react-router-dom'
 
-export default function HomePage() {
+HomePage.propTypes = {
+  onSubmit: PropTypes.func,
+}
+
+export default function HomePage({ onSubmit }) {
   return (
     <PageWrapper>
       <h2>Willkommen zu Hmpf!</h2>
@@ -19,6 +24,7 @@ export default function HomePage() {
         <LabeledInput
           label="Wie ist dein Name?"
           name="name"
+          type="text"
           placeholder="Dein Name"
           autoComplete="off"
           required
@@ -33,7 +39,9 @@ export default function HomePage() {
     const form = event.target
     const nameInput = form.elements.name
     const userName = nameInput.value
-    localStorage.setItem('currywurst', userName)
+    console.log(userName)
+    onSubmit(userName)
+    localStorage.setItem('user', userName)
   }
 }
 
