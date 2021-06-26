@@ -5,17 +5,14 @@ export default function HomePage() {
   return (
     <PageWrapper>
       <h2>Willkommen zu Hmpf!</h2>
+      <p>Schön, dass du da bist! 😇</p>
       <p>
-        Schön, dass du da bist! 😇
-        <br />
-        <br />
         <strong>
           <em>Hmpf!</em>
         </strong>{' '}
         hilft dir, dich und deine Gefühle besser zu verstehen. Oft überkommen
         uns unsere Gefühle, wir werden wütend, weinen und wissen nicht so recht
         warum es uns gerade so geht wie es uns geht.
-        <br /> <br />
       </p>
       <form onSubmit={handleSubmit}>
         <Label>
@@ -27,7 +24,6 @@ export default function HomePage() {
             autoComplete="off"
             required
           />
-          <br />
           <GoButton to="/lernen">Los geht's!</GoButton>
         </Label>
       </form>
@@ -71,6 +67,7 @@ const GoButton = styled(NavLink)`
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   color: #f6f6f6;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+  margin-top: 20px;
 `
 
 const Label = styled.label`
