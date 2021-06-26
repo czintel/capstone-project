@@ -1,13 +1,7 @@
 import styled from 'styled-components/macro'
-import PropTypes from 'prop-types'
 import Button from '../components/Button'
 
-StartPage.propTypes = {
-  onSubmit: PropTypes.func,
-  onClick: PropTypes.func,
-}
-
-export default function StartPage(onSubmit) {
+export default function HomePage() {
   return (
     <PageWrapper>
       <h2>Willkommen zu Hmpf!</h2>
@@ -21,18 +15,17 @@ export default function StartPage(onSubmit) {
         hilft dir, dich und deine Gefühle besser zu verstehen. Oft überkommen
         uns unsere Gefühle, wir werden wütend, weinen und wissen nicht so recht
         warum es uns gerade so geht wie es uns geht.
-        <br />
-        <br />
-        Lass{' '}
-        <strong>
-          <em>Hmpf!</em>
-        </strong>{' '}
-        dir genau in solchen Momenten helfen.
+        <br /> <br />
       </p>
       <form onSubmit={handleSubmit}>
         <Label>
-          Wie ist dein Name?
-          <input name="name" type="text" placeholder="Dein Name" />
+          <strong>Wie ist dein Name?</strong>
+          <input
+            name="name"
+            type="text"
+            placeholder="Dein Name"
+            autoComplete="off"
+          />
           <br />
           <GoButton>Los geht's!</GoButton>
         </Label>
@@ -45,21 +38,24 @@ export default function StartPage(onSubmit) {
     const form = event.target
     const nameInput = form.elements.name
     const userName = nameInput.value
-    localStorage.setItem('user name', userName)
+    localStorage.setItem('currywurst', userName)
     form.reset()
     nameInput.focus()
   }
 }
 
 const PageWrapper = styled.section`
-  color: #897869;
-  padding: 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
-  max-width: 375px;
-  margin: 0 auto;
+  background-color: #fffcfd;
+  background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
+  color: #897869;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 20px 40px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+  font-size: 1rem;
 `
 
 const GoButton = styled(Button)`

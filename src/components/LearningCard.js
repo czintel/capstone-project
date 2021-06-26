@@ -43,22 +43,20 @@ export default function Card({ name, description, tags, color }) {
 const LearningCard = styled.div`
   display: grid;
   gap: 20px;
-  width: ${prop => (prop.isExpanded ? '100%' : '155px')};
-  height: ${prop => (prop.isExpanded ? 'auto' : '155px')};
-  min-width: 155px;
-  max-width: 680px;
-  padding: ${prop => (prop.isExpanded ? '35px' : '35px 20px')};
+  width: ${prop => (prop.isExpanded ? '100%' : '135px')};
+  height: ${prop => (prop.isExpanded ? 'auto' : '135px')};
+  padding: ${prop => (prop.isExpanded ? '35px' : '30px 5px 40px')};
   border: none;
   color: #f6f6f6;
   border-radius: 30px;
   background-color: ${prop => prop.backgroundColor};
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
 
   h2 {
     font-size: ${prop => (prop.isExpanded ? '3rem' : '1.6rem')};
     text-align: center;
     line-height: 1;
-    margin: 0;
   }
 
   span {
@@ -72,7 +70,7 @@ const LearningCard = styled.div`
     flex-wrap: wrap;
     gap: 10px;
     list-style-type: none;
-    justify-content: left;
+    justify-content: center;
 
     li {
       padding: 3px 8px;

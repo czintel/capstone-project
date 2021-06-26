@@ -1,33 +1,40 @@
 import styled from 'styled-components/macro'
-import data from './data.json'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { useRef, useState } from 'react'
+import HomePage from './pages/HomePage'
 import QuizPage from './pages/QuizPage'
 import LearningPage from './pages/LearningPage'
+// import ScrollToTop from './components/ScrollToTop'
 import NavBar from './components/NavBar'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import StartPage from './pages/StartPage'
-import AppLogo from './assets/Logo.svg'
+import appLogo from './assets/Logo.svg'
 
 function App() {
+  const mainRef = useRef(null)
+  const [userName, setUserName] = useState('')
+
   return (
-    <>
-      <Router>
-        <Wrapper data={data}>
-          <Header>
-            <Logo src={AppLogo} alt="App Logo" />
-          </Header>
-          <Body>
-            <Switch>
-              <Route path="/start" component={StartPage} />
-              <Route path="/lernen" component={LearningPage} />
-              <Route path="/quiz" component={QuizPage} />
-            </Switch>
-          </Body>
-          <Footer>
-            <NavBar />
-          </Footer>
-        </Wrapper>
-      </Router>
-    </>
+    <Router>
+      <Wrapper>
+        {/* <ScrollToTop elementToScrollUp={mainRef} /> */}
+        <Header>
+          <Logo src={appLogo} alt="App Logo" />
+        </Header>
+        <Main ref={mainRef}>
+          <Switch>
+            <Route exact path="/">
+              <HomePage onSubmit={userName => setUserName(userName)} />
+            </Route>
+            <Route path="/lernen">
+              <LearningPage userName={userName} />
+            </Route>
+            <Route path="/quiz" component={QuizPage} />
+          </Switch>
+        </Main>
+        <Footer>
+          <NavBar />
+        </Footer>
+      </Wrapper>
+    </Router>
   )
 }
 
@@ -41,31 +48,39 @@ const Wrapper = styled.section`
     'header'
     'main'
     'footer';
-  justify-content: center;
-  justify-items: center;
-  overflow: visible;
+  margin: 0 auto;
+  width: auto;
+  max-width: 840px;
 `
 
 const Header = styled.header`
-  margin-top: 20px;
+  position: fixed;
+  left: 20px;
+  right: 20px;
   grid-area: header;
-  justify-content: center;
+  text-align: center;
+  padding-top: 20px;
+  background-color: #fffff7;
+  background-image: url('https://www.transparenttextures.com/patterns/notebook-dark.png');
 `
 
-const Body = styled.main`
+const Main = styled.main`
+  padding-top: 100px;
+  padding-bottom: 100px;
   grid-area: main;
-  height: 80vh;
-  align-content: center;
-  overflow: auto;
 `
 
 const Footer = styled.footer`
   grid-area: footer;
-  margin-bottom: 20px;
   position: fixed;
-  bottom: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
 `
 const Logo = styled.img`
+  justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
   height: 70px;
   svg {
     filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
