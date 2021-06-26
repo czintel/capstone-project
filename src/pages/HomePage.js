@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro'
+import LabeledInput from '../components/LabeledInput'
 import { NavLink } from 'react-router-dom'
 
 export default function HomePage() {
@@ -14,19 +15,16 @@ export default function HomePage() {
         uns unsere Gefühle, wir werden wütend, weinen und wissen nicht so recht
         warum es uns gerade so geht wie es uns geht.
       </p>
-      <form onSubmit={handleSubmit}>
-        <Label>
-          <strong>Wie ist dein Name?</strong>
-          <input
-            name="name"
-            type="text"
-            placeholder="Dein Name"
-            autoComplete="off"
-            required
-          />
-          <GoButton to="/lernen">Los geht's!</GoButton>
-        </Label>
-      </form>
+      <Form onSubmit={handleSubmit}>
+        <LabeledInput
+          label="Wie ist dein Name?"
+          name="name"
+          placeholder="Dein Name"
+          autoComplete="off"
+          required
+        />
+        <GoButton to="/lernen">Los geht's!</GoButton>
+      </Form>
     </PageWrapper>
   )
 
@@ -53,6 +51,22 @@ const PageWrapper = styled.section`
   font-size: 1rem;
 `
 
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  label {
+    display: grid;
+    gap: 4px;
+    font-weight: bold;
+  }
+
+  input {
+    padding: 4px;
+  }
+`
+
 const GoButton = styled(NavLink)`
   align-self: center;
   text-decoration: none;
@@ -68,10 +82,4 @@ const GoButton = styled(NavLink)`
   color: #f6f6f6;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
   margin-top: 20px;
-`
-
-const Label = styled.label`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 `
