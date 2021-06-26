@@ -25,6 +25,7 @@ export default function HomePage() {
             type="text"
             placeholder="Dein Name"
             autoComplete="off"
+            required
           />
           <br />
           <GoButton to="/lernen">Los geht's!</GoButton>
@@ -57,8 +58,8 @@ const PageWrapper = styled.section`
 `
 
 const GoButton = styled(NavLink)`
-  background-color: #79d45e;
   align-self: center;
+  text-decoration: none;
   width: fit-content;
   padding: 10px 15px;
   font-weight: 600;
@@ -66,7 +67,7 @@ const GoButton = styled(NavLink)`
   border-radius: 20px;
   justify-self: end;
   border: none;
-  background-color: darkgray;
+  background-color: #79d45e;
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   color: #f6f6f6;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
