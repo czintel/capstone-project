@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import Button from '../components/Button'
+import { NavLink } from 'react-router-dom'
 
 export default function HomePage() {
   return (
@@ -27,7 +27,7 @@ export default function HomePage() {
             autoComplete="off"
           />
           <br />
-          <GoButton>Los geht's!</GoButton>
+          <GoButton to="/lernen">Los geht's!</GoButton>
         </Label>
       </form>
     </PageWrapper>
@@ -39,8 +39,6 @@ export default function HomePage() {
     const nameInput = form.elements.name
     const userName = nameInput.value
     localStorage.setItem('currywurst', userName)
-    form.reset()
-    nameInput.focus()
   }
 }
 
@@ -58,9 +56,20 @@ const PageWrapper = styled.section`
   font-size: 1rem;
 `
 
-const GoButton = styled(Button)`
+const GoButton = styled(NavLink)`
   background-color: #79d45e;
   align-self: center;
+  width: fit-content;
+  padding: 10px 15px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 20px;
+  justify-self: end;
+  border: none;
+  background-color: darkgray;
+  background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
+  color: #f6f6f6;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
 `
 
 const Label = styled.label`
