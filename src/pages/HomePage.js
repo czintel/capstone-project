@@ -1,13 +1,15 @@
 import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
 import LabeledInput from '../components/LabeledInput'
-import { NavLink } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 HomePage.propTypes = {
   onSubmit: PropTypes.func,
 }
 
 export default function HomePage({ onSubmit }) {
+  const history = useHistory()
+
   return (
     <PageWrapper>
       <h2>Willkommen zu Hmpf!</h2>
@@ -29,7 +31,7 @@ export default function HomePage({ onSubmit }) {
           autoComplete="off"
           required
         />
-        <GoButton to="/lernen">Los geht's!</GoButton>
+        <GoButton type="submit">Los geht's!</GoButton>
       </Form>
     </PageWrapper>
   )
@@ -42,6 +44,7 @@ export default function HomePage({ onSubmit }) {
     console.log(userName)
     onSubmit(userName)
     localStorage.setItem('user', userName)
+    history.push('/lernen')
   }
 }
 
@@ -75,7 +78,7 @@ const Form = styled.form`
   }
 `
 
-const GoButton = styled(NavLink)`
+const GoButton = styled.button`
   align-self: center;
   text-decoration: none;
   width: fit-content;
