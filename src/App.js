@@ -23,7 +23,7 @@ function App() {
         <Main ref={mainRef}>
           <Switch>
             <Route exact path="/">
-              <HomePage onSubmit={handleSubmit} />
+              <HomePage onSubmit={handleNameSubmit} />
             </Route>
 
             <Route path="/lernen">
@@ -43,7 +43,7 @@ function App() {
     </Router>
   )
 
-  function handleSubmit({ userName }) {
+  function handleNameSubmit(userName) {
     setUserName(userName)
   }
 }
