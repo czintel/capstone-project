@@ -41,7 +41,6 @@ export default function HomePage({ onSubmit }) {
     const form = event.target
     const nameInput = form.elements.name
     const userName = nameInput.value
-    console.log(userName)
     onSubmit(userName)
     localStorage.setItem('user', userName)
     history.push('/lernen')
