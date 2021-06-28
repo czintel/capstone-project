@@ -8,7 +8,6 @@ LearningPage.propTypes = {
 }
 
 export default function LearningPage({ userName }) {
-  console.log(userName)
   return (
     <PageWrapper>
       <Welcome>
