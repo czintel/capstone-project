@@ -28,5 +28,6 @@ const PageWrapper = styled.section`
 
   button {
     width: 150px;
+    background-color: #f4889a;
   }
 `
