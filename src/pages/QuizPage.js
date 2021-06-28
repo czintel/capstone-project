@@ -1,13 +1,24 @@
 import styled from 'styled-components/macro'
+import { useState } from 'react'
 import QuizCard from '../components/QuizCard'
 import Header from '../components/Header'
-import filterSVG from '../assets/filterCorrect.svg'
+import filterActive from '../assets/filterActive.svg'
+import filterInactive from '../assets/filterInactive.svg'
+
 import data from '../data.json'
 
 export default function QuizPage() {
+  const [isActive, setIsActive] = useState()
+
   return (
     <PageWrapper>
-      <FilterButton src={filterSVG} alt="" />
+      <FilterButton
+        src={isActive ? filterActive : filterInactive}
+        alt=""
+        role="button"
+        isActive={false}
+        onClick={() => setIsActive(!isActive)}
+      />
       <Header />
 
       {data.quiz.map(({ title, scenario, question, answers, id }) => (
