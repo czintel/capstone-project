@@ -20,9 +20,9 @@ export default function LearningPage({ userName }) {
         </p>
       </Welcome>
       <CardWrapper>
-        {data.emotions.map(({ name, description, tags, color, emId }) => (
+        {data.emotions.map(({ name, description, tags, color, id }) => (
           <LearningCard
-            key={emId}
+            key={id}
             name={name}
             description={description}
             tags={tags}

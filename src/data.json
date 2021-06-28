@@ -15,7 +15,7 @@
         "zufrieden sein"
       ],
       "color": "#F2C849",
-      "emId": 1
+      "id": 1
     },
     {
       "name": "Angst",
@@ -31,7 +31,7 @@
         "verstecken"
       ],
       "color": "#A484E9",
-      "emId": 2
+      "id": 2
     },
     {
       "name": "Wut",
@@ -48,7 +48,7 @@
         "wütend sein"
       ],
       "color": "#F4889A",
-      "emId": 3
+      "id": 3
     },
     {
       "name": "Kummer",
@@ -65,11 +65,11 @@
         "niedergeschlagen"
       ],
       "color": "#31BFF3",
-      "emId": 4
+      "id": 4
     },
     {
       "name": "Ekel",
-      "description": "Ekel ist eine Emotion. Menschen empfinden ihn, wenn sie etwas sehen, berühren, hören oder schmecken, das sie für abstoßend Er wird auch durch Verachtung hervorgerufen. Zum Beispiel, wenn man etwas schmutzig oder nicht zum Essen geeignet findet. Wie ekelig wir Dinge finden, hängt davon ab welche Erfahrungen wir bisher gemacht haben. Nicht jeder findet die selben Dinge ekelig. Ekel kann absichtlich sein, da jemand etwas absichtlich tun kann, um diese Emotion zu erzeugen. Ekel hilft uns dabei, uns z.B. vor giftigen Dingen wie verdorbenem Essen zu schützen.",
+      "description": "Ekel ist eine Emotion. Menschen empfinden ihn, wenn sie etwas sehen, berühren, hören oder schmecken, das sie für abstoßend Er wird auch durch Verachtung hervorgerufen. Zum Beispiel, wenn man etwas schmutzig oder nicht zum Essen geeignet findet. Wie ekelig wir Dinge finden, hängt davon ab welche Erfahrungen wir bisher gemacht haben. Nicht jeder findet die selben Dinge ekelig. Ekel kann absichtlich sein, da jemand etwas absichtlich tun kann, um diese Emotion zu erzeugen. Ekel hilft uns dabei, uns z.B. vor giftigen Dingen wie verdorbenem Essen zu schützen oder Bakterien und Viren zu schützen, die uns krank machen können.",
       "tags": [
         "ekelhaft",
         "angewidert",
@@ -82,7 +82,7 @@
         "widerlich"
       ],
       "color": "#79D45E",
-      "emId": 5
+      "id": 5
     }
   ],
   "quiz": [
@@ -90,7 +90,7 @@
       "title": "Stell dir vor...",
       "scenario": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
       "question": "Welche Emotion spürt Tom?",
-      "qId": "1",
+      "id": "1",
       "answers": [
         {
           "answerText": "Freude",
@@ -118,7 +118,7 @@
       "title": "Stell dir vor... 2",
       "scenario": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
       "question": "Welche Emotion spürst du?",
-      "qId": "2",
+      "id": "2",
       "answers": [
         {
           "answerText": "Freude",
@@ -146,7 +146,7 @@
       "title": "Stell dir vor... 3",
       "scenario": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
       "question": "Welche Emotion spürst du?",
-      "qId": "3",
+      "id": "3",
       "answers": [
         {
           "answerText": "Freude",
@@ -174,7 +174,7 @@
       "title": "Stell dir vor... 4",
       "scenario": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
       "question": "Welche Emotion spürst du?",
-      "qId": "4",
+      "id": "4",
       "answers": [
         {
           "answerText": "Freude",
@@ -202,7 +202,7 @@
       "title": "Stell dir vor... 5",
       "scenario": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
       "question": "Welche Emotion spürst du?",
-      "qId": "5",
+      "id": "5",
       "answers": [
         {
           "answerText": "Freude",
