@@ -1,9 +1,11 @@
 import styled from 'styled-components/macro'
 import Button from '../components/Button'
+import Header from '../components/Header'
 
 export default function SettingsPage(onClick) {
   return (
     <PageWrapper>
+      <Header />
       <Button onClick={resetName}>Name löschen</Button>
       <Button onClick={deleteAllData}>Daten löschen</Button>
     </PageWrapper>
