@@ -37,11 +37,11 @@ export default function QuizPage() {
 const PageWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
-  padding: 20px 0;
   justify-content: center;
   gap: 20px;
   width: 100%;
   margin: 0 auto;
+  margin-top: 20px;
 `
 const FilterButton = styled.img`
   height: 45px;
