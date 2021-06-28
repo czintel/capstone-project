@@ -25,7 +25,7 @@ function App() {
             </Route>
 
             <Route path="/lernen">
-              <LearningPage />
+              <LearningPage userName={userName} />
             </Route>
 
             <Route path="/quiz">

@@ -14,6 +14,7 @@ const StyledHeader = styled.header`
   align-self: center;
   top: 0;
   width: 100%;
+  max-width: 760px;
   grid-area: header;
   text-align: center;
   padding-top: 20px;

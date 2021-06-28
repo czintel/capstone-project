@@ -8,7 +8,7 @@ import filterInactive from '../assets/filterInactive.svg'
 import data from '../data.json'
 
 export default function QuizPage() {
-  const [isActive, setIsActive] = useState()
+  const [isActive, setIsActive] = useState(false)
 
   return (
     <PageWrapper>
