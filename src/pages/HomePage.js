@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
 import LabeledInput from '../components/LabeledInput'
+import Header from '../components/Header'
 import { useHistory } from 'react-router-dom'
 
 HomePage.propTypes = {
@@ -13,6 +14,7 @@ export default function HomePage({ onSubmit }) {
 
   return (
     <PageWrapper>
+      <Header />
       <h2>Willkommen zu Hmpf!</h2>
       <p>Schön, dass du da bist! 😇</p>
       <p>
