@@ -3,29 +3,25 @@ import PropTypes from 'prop-types'
 import LearningCard from '../components/LearningCard'
 import data from '../data.json'
 
-LearningCardList.propTypes = {
+LearningPage.propTypes = {
   userName: PropTypes.string,
 }
 
-export default function LearningCardList({ userName }) {
-  const nameOfUser = localStorage.getItem(userName)
-  console.log(nameOfUser)
-
+export default function LearningPage({ userName }) {
   return (
     <PageWrapper>
       <Welcome>
-        <h3>Hallo {nameOfUser}!</h3>
+        <h3>Hallo {userName}!</h3>
         <p>
           <strong> Willkommen im Lernbereich von Hpmf! </strong>
           Klicke auf eine Themenkarte, die dich interessiert lies dir die Texte
           aufmerksam durch, um ein echter Emotions-Profi zu werden!
         </p>
       </Welcome>
-
       <CardWrapper>
-        {data.emotions.map(({ name, description, tags, color, emId }) => (
+        {data.emotions.map(({ name, description, tags, color, id }) => (
           <LearningCard
-            key={emId}
+            key={id}
             name={name}
             description={description}
             tags={tags}

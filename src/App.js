@@ -1,46 +1,63 @@
 import styled from 'styled-components/macro'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { useRef, useState } from 'react'
+import { useState, useEffect } from 'react'
+import { loadFromLocal, saveToLocal } from './utils/localStorage'
 import HomePage from './pages/HomePage'
 import QuizPage from './pages/QuizPage'
 import LearningPage from './pages/LearningPage'
-// import ScrollToTop from './components/ScrollToTop'
+import SettingsPage from './pages/SettingsPage'
 import NavBar from './components/NavBar'
 import appLogo from './assets/Logo.svg'
 
 function App() {
-  const mainRef = useRef(null)
-  const [userName, setUserName] = useState('')
+  const [userName, setUserName] = useState(loadFromLocal('userName') ?? [])
+
+  useEffect(() => {
+    saveToLocal('userName', userName)
+  }, [userName])
 
   return (
     <Router>
-      <Wrapper>
-        {/* <ScrollToTop elementToScrollUp={mainRef} /> */}
+      <AppGrid>
         <Header>
           <Logo src={appLogo} alt="App Logo" />
         </Header>
-        <Main ref={mainRef}>
+
+        <Main>
           <Switch>
             <Route exact path="/">
-              <HomePage onSubmit={userName => setUserName(userName)} />
+              <HomePage onSubmit={handleNameSubmit} />
             </Route>
+
             <Route path="/lernen">
               <LearningPage userName={userName} />
             </Route>
-            <Route path="/quiz" component={QuizPage} />
+
+            <Route path="/quiz">
+              <QuizPage />
+            </Route>
+
+            <Route path="/einstellung">
+              <SettingsPage onClick={handleNameSubmit} />
+            </Route>
           </Switch>
         </Main>
+
         <Footer>
           <NavBar />
         </Footer>
-      </Wrapper>
+      </AppGrid>
     </Router>
   )
+
+  function handleNameSubmit(userName) {
+    setUserName(userName)
+  }
 }
 
 export default App
 
-const Wrapper = styled.section`
+const AppGrid = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
@@ -82,7 +99,4 @@ const Logo = styled.img`
   justify-items: center;
   margin: 0 auto;
   height: 70px;
-  svg {
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-  }
 `

@@ -14,29 +14,27 @@ export default function Card({ name, description, tags, color }) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
-    <>
-      <LearningCard isExpanded={isExpanded} backgroundColor={color}>
-        <h2 isExpanded={isExpanded}>{name}</h2>
-        {isExpanded && (
-          <>
-            <span>
-              Was ist {name}? {description}
-            </span>
-            <ul>
-              {tags.map(tag => (
-                <li key={tag}>{tag}</li>
-              ))}
-            </ul>
-          </>
-        )}
-        <ButtonExpansion
-          isExpanded={isExpanded}
-          onClick={() => setIsExpanded(!isExpanded)}
-        >
-          {isExpanded ? '-' : '+'}
-        </ButtonExpansion>
-      </LearningCard>
-    </>
+    <LearningCard isExpanded={isExpanded} backgroundColor={color}>
+      <h2 isExpanded={isExpanded}>{name}</h2>
+      {isExpanded && (
+        <>
+          <span>
+            Was ist {name}? {description}
+          </span>
+          <ul>
+            {tags.map(tag => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+        </>
+      )}
+      <ButtonExpansion
+        isExpanded={isExpanded}
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        {isExpanded ? '-' : '+'}
+      </ButtonExpansion>
+    </LearningCard>
   )
 }
 
@@ -46,6 +44,7 @@ const LearningCard = styled.div`
   width: ${prop => (prop.isExpanded ? '100%' : '135px')};
   height: ${prop => (prop.isExpanded ? 'auto' : '135px')};
   padding: ${prop => (prop.isExpanded ? '35px' : '30px 5px 40px')};
+  margin: ${prop => (prop.isExpanded ? '0 20px' : '')};
   border: none;
   color: #f6f6f6;
   border-radius: 30px;

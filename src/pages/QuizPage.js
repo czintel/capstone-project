@@ -5,9 +5,9 @@ import data from '../data.json'
 export default function QuizPage() {
   return (
     <PageWrapper>
-      {data.quiz.map(({ title, scenario, question, answers, qId }) => (
+      {data.quiz.map(({ title, scenario, question, answers, id }) => (
         <QuizCard
-          key={qId}
+          key={id}
           title={title}
           scenario={scenario}
           question={question}

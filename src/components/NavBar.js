@@ -15,8 +15,11 @@ export default function NavBar() {
       <StyledLink to="/lernen" activeStyle={active}>
         Lernen
       </StyledLink>
-      <StyledLink to="/quiz" activeStyle={active} $isRight>
+      <StyledLink to="/quiz" activeStyle={active}>
         Quiz
+      </StyledLink>
+      <StyledLink to="/einstellung" activeStyle={active} $isRight>
+        Option
       </StyledLink>
     </Navigation>
   )
