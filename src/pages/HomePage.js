@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom'
 
 HomePage.propTypes = {
   onSubmit: PropTypes.func,
+  userName: PropTypes.string,
 }
 
 export default function HomePage({ onSubmit }) {
@@ -42,7 +43,6 @@ export default function HomePage({ onSubmit }) {
     const nameInput = form.elements.name
     const userName = nameInput.value
     onSubmit(userName)
-    localStorage.setItem('user', userName)
     history.push('/lernen')
   }
 }

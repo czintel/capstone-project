@@ -1,26 +1,29 @@
 import styled from 'styled-components/macro'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { useRef, useState } from 'react'
+import { useState, useEffect } from 'react'
+import { loadFromLocal, saveToLocal } from './utils/localStorage'
 import HomePage from './pages/HomePage'
 import QuizPage from './pages/QuizPage'
 import LearningPage from './pages/LearningPage'
-// import ScrollToTop from './components/ScrollToTop'
+import SettingsPage from './pages/SettingsPage'
 import NavBar from './components/NavBar'
 import appLogo from './assets/Logo.svg'
 
 function App() {
-  const mainRef = useRef(null)
-  const [userName, setUserName] = useState('')
+  const [userName, setUserName] = useState(loadFromLocal('userName') ?? [])
+
+  useEffect(() => {
+    saveToLocal('userName', userName)
+  }, [userName])
 
   return (
     <Router>
       <AppGrid>
-        {/* <ScrollToTop elementToScrollUp={mainRef} /> */}
         <Header>
           <Logo src={appLogo} alt="App Logo" />
         </Header>
 
-        <Main ref={mainRef}>
+        <Main>
           <Switch>
             <Route exact path="/">
               <HomePage onSubmit={handleNameSubmit} />
@@ -32,6 +35,10 @@ function App() {
 
             <Route path="/quiz">
               <QuizPage />
+            </Route>
+
+            <Route path="/einstellung">
+              <SettingsPage onClick={handleNameSubmit} />
             </Route>
           </Switch>
         </Main>
@@ -92,7 +99,4 @@ const Logo = styled.img`
   justify-items: center;
   margin: 0 auto;
   height: 70px;
-  svg {
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-  }
 `
