@@ -9,6 +9,7 @@ import data from '../data.json'
 
 export default function QuizPage() {
   const [isActive, setIsActive] = useState(false)
+  const [correctAnswers, setCorrectAnswers] = useState([])
 
   return (
     <PageWrapper>
@@ -21,17 +22,34 @@ export default function QuizPage() {
       />
       <Header />
 
-      {data.quiz.map(({ title, scenario, question, answers, id }) => (
-        <QuizCard
-          key={id}
-          title={title}
-          scenario={scenario}
-          question={question}
-          answers={answers}
-        />
-      ))}
+      {isActive
+        ? correctAnswers.map(({ title, scenario, question, answers, id }) => (
+            <QuizCard
+              key={id}
+              title={title}
+              scenario={scenario}
+              question={question}
+              answers={answers}
+              onAddCorrectAnswer={() => handleCorrectAnswer(id)}
+            />
+          ))
+        : data.quiz.map(({ title, scenario, question, answers, id }) => (
+            <QuizCard
+              key={id}
+              title={title}
+              scenario={scenario}
+              question={question}
+              answers={answers}
+              onAddCorrectAnswer={() => handleCorrectAnswer(id)}
+            />
+          ))}
     </PageWrapper>
   )
+
+  function handleCorrectAnswer(id) {
+    const correctAnsweredQuizCard = data.quiz.find(card => card.id === id)
+    setCorrectAnswers([...correctAnswers, correctAnsweredQuizCard])
+  }
 }
 
 const PageWrapper = styled.section`

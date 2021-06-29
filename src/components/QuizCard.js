@@ -9,13 +9,24 @@ QuizCard.propTypes = {
   answers: PropTypes.array,
 }
 
-export default function QuizCard({ title, scenario, question, answers }) {
+export default function QuizCard({
+  title,
+  scenario,
+  question,
+  answers,
+  onAddCorrectAnswer,
+}) {
   const [bgColor, setBgColor] = useState('darkgray')
   const [selectedAnswer, setSelectedAnswer] = useState(null)
+
   const handleAnswerClick = (isCorrect, answer) => {
     const color = isCorrect ? '#79D45E' : '#F4889A'
     setBgColor(color)
     setSelectedAnswer(answer)
+
+    if (isCorrect) {
+      onAddCorrectAnswer()
+    }
   }
 
   return (
