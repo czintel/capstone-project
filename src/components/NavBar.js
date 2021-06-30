@@ -1,5 +1,9 @@
 import styled from 'styled-components/macro'
 import { NavLink } from 'react-router-dom'
+import home from '../assets/home.svg'
+import lernen from '../assets/lernen.svg'
+import quiz from '../assets/quiz.svg'
+import settings from '../assets/settings.svg'
 
 export default function NavBar() {
   const active = {
@@ -10,16 +14,16 @@ export default function NavBar() {
   return (
     <Navigation>
       <StyledLink exact to="/" activeStyle={active} $isLeft>
-        Start
+        <img src={home} alt="home" />
       </StyledLink>
       <StyledLink to="/lernen" activeStyle={active}>
-        Lernen
+        <img src={lernen} alt="lernen" />
       </StyledLink>
       <StyledLink to="/quiz" activeStyle={active}>
-        Quiz
+        <img src={quiz} alt="quiz" />
       </StyledLink>
       <StyledLink to="/einstellung" activeStyle={active} $isRight>
-        Option
+        <img src={settings} alt="settings" />
       </StyledLink>
     </Navigation>
   )
@@ -57,4 +61,9 @@ const StyledLink = styled(NavLink)`
   border-bottom-left-radius: ${prop => (prop.$isLeft ? '30px' : '0')};
   background-color: darkgray;
   color: #f6f6f6;
+
+  img {
+    width: 35px;
+    height: auto;
+  }
 `

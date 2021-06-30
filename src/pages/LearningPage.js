@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
 import LearningCard from '../components/LearningCard'
+import Header from '../components/Header'
 import data from '../data.json'
 
 LearningPage.propTypes = {
@@ -9,27 +10,30 @@ LearningPage.propTypes = {
 
 export default function LearningPage({ userName }) {
   return (
-    <PageWrapper>
-      <Welcome>
-        <h3>Hallo {userName}!</h3>
-        <p>
-          <strong> Willkommen im Lernbereich von Hpmf! </strong>
-          Klicke auf eine Themenkarte, die dich interessiert lies dir die Texte
-          aufmerksam durch, um ein echter Emotions-Profi zu werden!
-        </p>
-      </Welcome>
-      <CardWrapper>
-        {data.emotions.map(({ name, description, tags, color, id }) => (
-          <LearningCard
-            key={id}
-            name={name}
-            description={description}
-            tags={tags}
-            color={color}
-          />
-        ))}
-      </CardWrapper>
-    </PageWrapper>
+    <>
+      <PageWrapper>
+        <Header />
+        <Welcome>
+          <h3>Hallo {userName}!</h3>
+          <p>
+            <strong> Willkommen im Lernbereich von Hpmf! </strong>
+            Klicke auf eine Themenkarte, die dich interessiert lies dir die
+            Texte aufmerksam durch, um ein echter Emotions-Profi zu werden!
+          </p>
+        </Welcome>
+        <CardWrapper>
+          {data.emotions.map(({ name, description, tags, color, id }) => (
+            <LearningCard
+              key={id}
+              name={name}
+              description={description}
+              tags={tags}
+              color={color}
+            />
+          ))}
+        </CardWrapper>
+      </PageWrapper>
+    </>
   )
 }
 

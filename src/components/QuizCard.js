@@ -9,13 +9,24 @@ QuizCard.propTypes = {
   answers: PropTypes.array,
 }
 
-export default function QuizCard({ title, scenario, question, answers }) {
+export default function QuizCard({
+  title,
+  scenario,
+  question,
+  answers,
+  onAddCorrectAnswer,
+}) {
   const [bgColor, setBgColor] = useState('darkgray')
   const [selectedAnswer, setSelectedAnswer] = useState(null)
+
   const handleAnswerClick = (isCorrect, answer) => {
-    const color = isCorrect ? '#99c140' : '#cc3232'
+    const color = isCorrect ? '#79D45E' : '#F4889A'
     setBgColor(color)
     setSelectedAnswer(answer)
+
+    if (isCorrect) {
+      onAddCorrectAnswer()
+    }
   }
 
   return (
@@ -61,7 +72,7 @@ const Card = styled.div`
   h2 {
     background-color: ${props => props.bgColor};
     background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
-    color: #f6f6f6;
+    color: white;
     font-size: 1.8rem;
     padding: 20px 20px 15px;
     border-radius: 30px 30px 0 0;
@@ -94,12 +105,11 @@ const AnswerButton = styled.button`
   padding: 7px 10px;
   border-radius: 20px;
   border: none;
-  color: gray;
+  color: white;
+  background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   ${props =>
     props.bgColor &&
     css`
       background-color: ${props.bgColor};
-      color: #f6f6f6;
-      background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
     `}
 `

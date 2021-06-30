@@ -1,20 +1,28 @@
 import styled from 'styled-components/macro'
 import Button from '../components/Button'
+import Header from '../components/Header'
+import { useHistory } from 'react-router-dom'
 
-export default function SettingsPage(onClick) {
+export default function SettingsPage() {
+  const history = useHistory()
   return (
     <PageWrapper>
-      <Button onClick={resetName}>Name löschen</Button>
-      <Button onClick={deleteAllData}>Daten löschen</Button>
+      <Header />
+      <ButtonResetName onClick={resetName}>Name ändern</ButtonResetName>
+      <ButtonDeleteAllData onClick={deleteAllData}>
+        Daten löschen
+      </ButtonDeleteAllData>
     </PageWrapper>
   )
 
   function resetName() {
     window.localStorage.removeItem('userName')
+    history.push('/')
   }
 
   function deleteAllData() {
     window.localStorage.clear()
+    history.push('/')
   }
 }
 
@@ -28,6 +36,13 @@ const PageWrapper = styled.section`
 
   button {
     width: 150px;
-    background-color: #f4889a;
   }
+`
+
+const ButtonResetName = styled(Button)`
+  background-color: darkgray;
+`
+const ButtonDeleteAllData = styled(Button)`
+  background-color: darkgray;
+  background-color: #f4889a;
 `
