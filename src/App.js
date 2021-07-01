@@ -74,7 +74,7 @@ const Main = styled.main`
 const Footer = styled.footer`
   grid-area: footer;
   position: fixed;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
 `

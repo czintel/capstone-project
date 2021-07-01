@@ -12,28 +12,43 @@ export default function NavBar() {
   }
 
   return (
-    <Navigation>
-      <StyledLink exact to="/" activeStyle={active} $isLeft>
-        <img src={home} alt="home" />
-      </StyledLink>
-      <StyledLink to="/lernen" activeStyle={active}>
-        <img src={lernen} alt="lernen" />
-      </StyledLink>
-      <StyledLink to="/quiz" activeStyle={active}>
-        <img src={quiz} alt="quiz" />
-      </StyledLink>
-      <StyledLink to="/einstellung" activeStyle={active} $isRight>
-        <img src={settings} alt="settings" />
-      </StyledLink>
-    </Navigation>
+    <NavigationWrapper>
+      <Navigation>
+        <StyledLink exact to="/" activeStyle={active} $isLeft>
+          <img src={home} alt="home" />
+        </StyledLink>
+        <StyledLink to="/lernen" activeStyle={active}>
+          <img src={lernen} alt="lernen" />
+        </StyledLink>
+        <StyledLink to="/quiz" activeStyle={active}>
+          <img src={quiz} alt="quiz" />
+        </StyledLink>
+        <StyledLink to="/einstellung" activeStyle={active} $isRight>
+          <img src={settings} alt="settings" />
+        </StyledLink>
+      </Navigation>
+    </NavigationWrapper>
   )
 }
 
+const NavigationWrapper = styled.div`
+  background: rgb(255, 255, 247);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 247, 1) 0%,
+    rgba(255, 255, 247, 1) 70%,
+    rgba(255, 255, 247, 0) 100%
+  );
+  height: 100px;
+  width: auto;
+`
+
 const Navigation = styled.ul`
-  display: flex;
-  width: 100%;
+  position: fixed;
+  bottom: 20px;
   left: 20px;
   right: 20px;
+  display: flex;
   padding-left: 0;
   list-style: none;
   border-radius: 30px;

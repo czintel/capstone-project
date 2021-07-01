@@ -3,23 +3,34 @@ import appLogo from '../assets/Logo.svg'
 
 export default function Header() {
   return (
-    <StyledHeader>
-      <Logo src={appLogo} alt="App Logo" />
-    </StyledHeader>
+    <HeaderWrapper>
+      <StyledHeader>
+        <Logo src={appLogo} alt="App Logo" />
+      </StyledHeader>
+    </HeaderWrapper>
   )
 }
 
-const StyledHeader = styled.header`
+const HeaderWrapper = styled.div`
   position: fixed;
-  align-self: center;
   top: 0;
+  align-self: center;
   width: 100%;
-  max-width: 760px;
+  height: 110px;
+  background: rgb(255, 255, 247);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 247, 0) 0%,
+    rgba(255, 255, 247, 1) 15%,
+    rgba(255, 255, 247, 1) 100%
+  );
+`
+
+const StyledHeader = styled.header`
+  align-self: center;
   grid-area: header;
   text-align: center;
   padding-top: 20px;
-  background-color: #fffff7;
-  background-image: url('https://www.transparenttextures.com/patterns/notebook-dark.png');
 `
 
 const Logo = styled.img`
