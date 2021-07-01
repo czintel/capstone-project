@@ -17,7 +17,7 @@ export default function LearningPage({ userName }) {
           <h3>Hallo {userName}!</h3>
           <p>
             <strong> Willkommen im Lernbereich von Hpmf! </strong>
-            Klicke auf eine Themenkarte, die dich interessiert lies dir die
+            Klicke auf eine Themenkarte, die dich interessiert und lies dir die
             Texte aufmerksam durch, um ein echter Emotions-Profi zu werden!
           </p>
         </Welcome>

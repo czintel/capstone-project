@@ -67,5 +67,5 @@ const FilterButton = styled.img`
   position: fixed;
   right: 15%;
   top: 30px;
-  z-index: 1000;
+  z-index: 1200;
 `

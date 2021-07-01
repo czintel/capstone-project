@@ -18,12 +18,15 @@ export default function HomePage({ onSubmit }) {
       <h2>Willkommen zu Hmpf!</h2>
       <p>Schön, dass du da bist! 😇</p>
       <p>
+        Oft überkommen unsere Emotionen uns wie aus dem Nichts. Wir werden
+        wütend, weinen und wissen gar nicht so recht was mit uns los ist.
+      </p>
+      <p>
         <strong>
           <em>Hmpf!</em>
-        </strong>{' '}
-        hilft dir, dich und deine Gefühle besser zu verstehen. Oft überkommen
-        uns unsere Gefühle, wir werden wütend, weinen und wissen nicht so recht
-        warum es uns gerade so geht wie es uns geht.
+        </strong>
+        {'  '}
+        hilft dir dabei, dich und deine Gefühle besser zu verstehen.
       </p>
       <Form onSubmit={handleSubmit}>
         <LabeledInput
