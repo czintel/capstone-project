@@ -73,20 +73,17 @@ const Card = styled.div`
     background-color: ${props => props.bgColor};
     background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
     color: white;
-    font-size: 1.8rem;
     padding: 20px 20px 15px;
     border-radius: 30px 30px 0 0;
   }
   h3 {
     color: #565656;
     padding: 0 30px;
-    font-size: 1.1rem;
     line-height: 1.4;
   }
   p {
-    padding: 0 40px;
+    padding: 0 30px;
     text-align: left;
-    font-size: 1rem;
     line-height: 1.4;
   }
 `
