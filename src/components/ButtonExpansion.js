@@ -24,6 +24,7 @@ const ButtonExpansion = styled.button`
   color: gray;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   justify-self: center;
+  z-index: 0;
 `
 const ChildWrapper = styled.span`
   position: absolute;

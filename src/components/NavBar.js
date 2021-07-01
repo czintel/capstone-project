@@ -41,6 +41,7 @@ const NavigationWrapper = styled.div`
   );
   height: 100px;
   width: auto;
+  z-index: 1100;
 `
 
 const Navigation = styled.ul`

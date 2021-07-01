@@ -24,6 +24,7 @@ const HeaderWrapper = styled.div`
     rgba(255, 255, 247, 1) 15%,
     rgba(255, 255, 247, 1) 100%
   );
+  z-index: 1000;
 `
 
 const StyledHeader = styled.header`
