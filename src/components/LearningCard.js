@@ -74,7 +74,7 @@ const LearningCard = styled.div`
     li {
       padding: 3px 8px;
       border-radius: 10px;
-      background-color: #f6f6f6;
+      background-color: var(--background-white);
       color: gray;
     }
   }

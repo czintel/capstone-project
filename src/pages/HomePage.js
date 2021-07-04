@@ -56,9 +56,9 @@ const PageWrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: #fffcfd;
+  background-color: var(--background-white);
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
-  color: #897869;
+  color: var(--text-1);
   border-radius: 30px;
   padding: 30px;
   margin: 20px 40px;
@@ -92,9 +92,9 @@ const GoButton = styled.button`
   border-radius: 20px;
   justify-self: end;
   border: none;
-  background-color: #79d45e;
+  background-color: var(--ekel);
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
-  color: #f6f6f6;
+  color: var(--background-white);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
   margin-top: 20px;
 `

@@ -16,11 +16,11 @@ export default function QuizCard({
   answers,
   onAddCorrectAnswer,
 }) {
-  const [bgColor, setBgColor] = useState('darkgray')
+  const [bgColor, setBgColor] = useState('var(--gray)')
   const [selectedAnswer, setSelectedAnswer] = useState(null)
 
   const handleAnswerClick = (isCorrect, answer) => {
-    const color = isCorrect ? '#79D45E' : '#F4889A'
+    const color = isCorrect ? 'var(--ekel)' : 'var(--wut)'
     setBgColor(color)
     setSelectedAnswer(answer)
 
@@ -30,29 +30,29 @@ export default function QuizCard({
   }
 
   return (
-    <>
-      <Card bgColor={bgColor}>
-        <h2>{title}</h2>
-        <p>{scenario}</p>
-        <h3>{question}</h3>
-        <AnswerSection>
-          {answers.map(answer => (
-            <AnswerButton
-              key={answer.answerText}
-              onClick={() =>
-                handleAnswerClick(answer.isCorrect, answer.answerText)
-              }
-              isCorrect={answer.isCorrect}
-              bgColor={
-                answer.answerText === selectedAnswer ? bgColor : '#cccccc'
-              }
-            >
-              {answer.answerText}
-            </AnswerButton>
-          ))}
-        </AnswerSection>
-      </Card>
-    </>
+    <Card bgColor={bgColor}>
+      <h2>{title}</h2>
+      <p>{scenario}</p>
+      <h3>{question}</h3>
+      <AnswerSection>
+        {answers.map(answer => (
+          <AnswerButton
+            key={answer.answerText}
+            onClick={() =>
+              handleAnswerClick(answer.isCorrect, answer.answerText)
+            }
+            isCorrect={answer.isCorrect}
+            bgColor={
+              answer.answerText === selectedAnswer
+                ? bgColor
+                : 'var(--gray-light)'
+            }
+          >
+            {answer.answerText}
+          </AnswerButton>
+        ))}
+      </AnswerSection>
+    </Card>
   )
 }
 const Card = styled.div`
@@ -61,7 +61,7 @@ const Card = styled.div`
   margin: 0 40px 20px;
   width: 100%;
   line-height: 1;
-  background-color: #fffcfd;
+  background-color: var(--background-white);
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   padding: 0 0 30px;
   border-radius: 30px;
@@ -77,7 +77,7 @@ const Card = styled.div`
     border-radius: 30px 30px 0 0;
   }
   h3 {
-    color: #565656;
+    color: var(--gray-dark);
     padding: 0 30px;
     line-height: 1.4;
   }
@@ -102,7 +102,7 @@ const AnswerButton = styled.button`
   padding: 7px 10px;
   border-radius: 20px;
   border: none;
-  color: white;
+  color: var(--background-white);
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   ${props =>
     props.bgColor &&

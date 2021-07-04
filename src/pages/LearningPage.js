@@ -54,9 +54,9 @@ const CardWrapper = styled.section`
 `
 
 const Welcome = styled.section`
-  background-color: #fffcfd;
+  background-color: var(--background-white);
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
-  color: #897869;
+  color: var(--text-1);
   margin: 20px 40px;
   padding: 30px;
   border-radius: 30px;

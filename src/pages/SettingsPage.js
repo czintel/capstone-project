@@ -40,9 +40,8 @@ const PageWrapper = styled.section`
 `
 
 const ButtonResetName = styled(Button)`
-  background-color: darkgray;
+  background-color: var(--gray);
 `
 const ButtonDeleteAllData = styled(Button)`
-  background-color: darkgray;
-  background-color: #f4889a;
+  background-color: var(--wut);
 `

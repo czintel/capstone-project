@@ -8,7 +8,7 @@ import settings from '../assets/settings.svg'
 export default function NavBar() {
   const active = {
     fontWeight: '700',
-    backgroundColor: '#F4889A',
+    backgroundColor: 'var(--wut)',
   }
 
   return (
@@ -75,7 +75,7 @@ const StyledLink = styled(NavLink)`
   border-bottom-right-radius: ${prop => (prop.$isRight ? '30px' : '0')};
   border-top-left-radius: ${prop => (prop.$isLeft ? '30px' : '0')};
   border-bottom-left-radius: ${prop => (prop.$isLeft ? '30px' : '0')};
-  background-color: darkgray;
+  background-color: var(--gray);
   color: #f6f6f6;
 
   img {
