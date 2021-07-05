@@ -44,7 +44,7 @@ const BackgroundFadeOut = styled.div`
   z-index: 1100;
 `
 
-const Navigation = styled.ul`
+const Navigation = styled.nav`
   position: fixed;
   bottom: 20px;
   left: 20px;
