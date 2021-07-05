@@ -43,5 +43,5 @@ const ButtonResetName = styled(Button)`
   background-color: var(--gray);
 `
 const ButtonDeleteAllData = styled(Button)`
-  background-color: var(--wut);
+  background-color: var(--red);
 `

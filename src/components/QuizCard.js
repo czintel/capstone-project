@@ -20,7 +20,7 @@ export default function QuizCard({
   const [selectedAnswer, setSelectedAnswer] = useState(null)
 
   const handleAnswerClick = (isCorrect, answer) => {
-    const color = isCorrect ? 'var(--ekel)' : 'var(--wut)'
+    const color = isCorrect ? 'var(--green)' : 'var(--red)'
     setBgColor(color)
     setSelectedAnswer(answer)
 

@@ -8,7 +8,7 @@ import settings from '../assets/settings.svg'
 export default function NavBar() {
   const active = {
     fontWeight: '700',
-    backgroundColor: 'var(--wut)',
+    backgroundColor: 'var(--red)',
   }
 
   return (

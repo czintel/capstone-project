@@ -3,11 +3,11 @@ import { createGlobalStyle } from 'styled-components/macro'
 export default createGlobalStyle`
 
 :root {
-  --freude: #F2C849;
-  --angst: #A484E9;
-  --wut: #F4889A;
+  --yellow: #F2C849;
+  --purple: #A484E9;
+  --red: #F4889A;
   --kummer: #31BFF3;
-  --ekel: #79D45E;
+  --green: #79D45E;
   --gray-light: #cccccc;
   --gray: #a9a9a9;
   --gray-dark: #636363;

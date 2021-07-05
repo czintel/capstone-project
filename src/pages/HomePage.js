@@ -92,7 +92,7 @@ const GoButton = styled.button`
   border-radius: 20px;
   justify-self: end;
   border: none;
-  background-color: var(--ekel);
+  background-color: var(--green);
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   color: var(--background-white);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
