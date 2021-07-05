@@ -12,7 +12,7 @@ export default function NavBar() {
   }
 
   return (
-    <NavigationWrapper>
+    <BackgroundFadeOut>
       <Navigation>
         <StyledLink exact to="/" activeStyle={active} $isLeft>
           <img src={home} alt="home" />
@@ -27,11 +27,11 @@ export default function NavBar() {
           <img src={settings} alt="settings" />
         </StyledLink>
       </Navigation>
-    </NavigationWrapper>
+    </BackgroundFadeOut>
   )
 }
 
-const NavigationWrapper = styled.div`
+const BackgroundFadeOut = styled.div`
   background: rgb(255, 255, 247);
   background: linear-gradient(
     0deg,
