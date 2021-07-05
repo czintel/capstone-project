@@ -20,6 +20,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     font-family: 'Dosis', sans-serif;
+    letter-spacing: 0.03em;
   }
  
   body {
