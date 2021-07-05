@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro'
+import { useHistory } from 'react-router-dom'
 import Button from '../components/Button'
 import Header from '../components/Header'
-import { useHistory } from 'react-router-dom'
 
 export default function SettingsPage() {
   const history = useHistory()
@@ -30,9 +30,9 @@ const PageWrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-top: 50px;
   font-size: 1rem;
   align-items: center;
-  margin-top: 50px;
 
   button {
     width: 150px;

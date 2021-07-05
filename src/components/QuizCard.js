@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components/macro'
+import PropTypes from 'prop-types'
 import { useState } from 'react'
 
 QuizCard.propTypes = {
@@ -97,9 +97,9 @@ const AnswerSection = styled.div`
   justify-content: center;
 `
 const AnswerButton = styled.button`
+  padding: 7px 10px;
   font-size: 0.9rem;
   line-height: 1;
-  padding: 7px 10px;
   border-radius: 20px;
   border: none;
   color: var(--background-white);

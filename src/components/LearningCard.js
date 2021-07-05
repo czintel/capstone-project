@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
-import ButtonExpansion from './ButtonExpansion'
+import PropTypes from 'prop-types'
 import { useState } from 'react'
+import ButtonExpansion from './ButtonExpansion'
 
 Card.propTypes = {
   name: PropTypes.string,
@@ -63,11 +63,11 @@ const LearningCard = styled.div`
   }
 
   ul {
-    padding: 0 10px;
-    font-size: 0.9rem;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    padding: 0 10px;
+    font-size: 0.9rem;
     list-style-type: none;
     justify-content: center;
 

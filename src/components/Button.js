@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
+import PropTypes from 'prop-types'
 
 Button.propTypes = {
   onClick: PropTypes.func,
@@ -17,11 +17,11 @@ export default function Button({ onClick, children, ...props }) {
 const StyledButton = styled.button`
   width: fit-content;
   padding: 10px 15px;
-  font-weight: 600;
-  font-size: 1rem;
   border-radius: 20px;
-  justify-self: end;
   border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  justify-self: end;
   background-color: var(--gray);
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   color: var(--background-white);

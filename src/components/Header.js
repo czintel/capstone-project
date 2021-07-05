@@ -28,10 +28,10 @@ const HeaderWrapper = styled.div`
 `
 
 const StyledHeader = styled.header`
-  align-self: center;
   grid-area: header;
-  text-align: center;
   padding-top: 20px;
+  align-self: center;
+  text-align: center;
 `
 
 const Logo = styled.img`

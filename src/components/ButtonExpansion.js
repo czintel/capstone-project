@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components/macro'
+import PropTypes from 'prop-types'
 
 Button.propTypes = {
   children: PropTypes.node,
@@ -22,9 +22,9 @@ const ButtonExpansion = styled.button`
   border: none;
   background-color: var(--background-white);
   color: gray;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   justify-self: center;
   z-index: 0;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 `
 const ChildWrapper = styled.span`
   position: absolute;

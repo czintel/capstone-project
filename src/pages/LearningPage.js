@@ -1,8 +1,8 @@
 import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
-import LearningCard from '../components/LearningCard'
-import Header from '../components/Header'
 import data from '../data.json'
+import Header from '../components/Header'
+import LearningCard from '../components/LearningCard'
 
 LearningPage.propTypes = {
   userName: PropTypes.string,
@@ -45,20 +45,20 @@ const PageWrapper = styled.section`
 `
 
 const CardWrapper = styled.section`
-  margin: 0 20px;
   display: flex;
+  gap: 20px;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 0 20px;
   justify-content: center;
-  gap: 20px;
 `
 
 const Welcome = styled.section`
+  padding: 30px;
+  margin: 20px 40px;
+  border-radius: 30px;
+  color: var(--text-1);
   background-color: var(--background-white);
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
-  color: var(--text-1);
-  margin: 20px 40px;
-  padding: 30px;
-  border-radius: 30px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
 `

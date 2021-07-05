@@ -1,8 +1,8 @@
 import styled from 'styled-components/macro'
 import PropTypes from 'prop-types'
-import LabeledInput from '../components/LabeledInput'
-import Header from '../components/Header'
 import { useHistory } from 'react-router-dom'
+import Header from '../components/Header'
+import LabeledInput from '../components/LabeledInput'
 
 HomePage.propTypes = {
   onSubmit: PropTypes.func,
@@ -56,14 +56,14 @@ const PageWrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 30px;
+  margin: 20px 40px;
+  border-radius: 30px;
+  font-size: 1rem;
   background-color: var(--background-white);
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   color: var(--text-1);
-  border-radius: 30px;
-  padding: 30px;
-  margin: 20px 40px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
-  font-size: 1rem;
 `
 
 const Form = styled.form`
@@ -83,18 +83,18 @@ const Form = styled.form`
 `
 
 const GoButton = styled.button`
-  align-self: center;
-  text-decoration: none;
   width: fit-content;
   padding: 10px 15px;
+  margin-top: 20px;
+  align-self: center;
+  justify-self: end;
+  border-radius: 20px;
+  border: none;
+  text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  border-radius: 20px;
-  justify-self: end;
-  border: none;
   background-color: var(--green);
   background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
   color: var(--background-white);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
-  margin-top: 20px;
 `

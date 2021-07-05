@@ -60,11 +60,11 @@ const Navigation = styled.ul`
 
 const StyledLink = styled(NavLink)`
   display: flex;
+  height: 60px;
+  width: 100%;
   text-align: center;
   align-items: center;
   justify-content: space-around;
-  height: 60px;
-  width: 100%;
   text-decoration: none;
   border-style: none;
   font-weight: 400;
