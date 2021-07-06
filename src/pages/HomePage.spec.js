@@ -4,6 +4,6 @@ import HomePage from './HomePage'
 describe('HomePage', () => {
   it('renders', () => {
     render(<HomePage />)
-    expect(screen.getByText('HomePage')).toBeInTheDocument()
+    expect(screen.getByText('Willkommen zu Hmpf!')).toBeInTheDocument()
   })
 })

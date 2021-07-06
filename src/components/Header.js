@@ -3,20 +3,21 @@ import appLogo from '../assets/Logo.svg'
 
 export default function Header() {
   return (
-    <HeaderWrapper>
-      <StyledHeader>
-        <Logo src={appLogo} alt="App Logo" />
-      </StyledHeader>
-    </HeaderWrapper>
+    <StyledHeader role="header">
+      <Logo src={appLogo} alt="App Logo" />
+    </StyledHeader>
   )
 }
 
-const HeaderWrapper = styled.div`
+const StyledHeader = styled.header`
+  grid-area: header;
   position: fixed;
-  top: 0;
-  align-self: center;
   width: 100%;
   height: 110px;
+  padding-top: 20px;
+  top: 0;
+  align-self: center;
+  text-align: center;
   background: rgb(255, 255, 247);
   background: linear-gradient(
     0deg,
@@ -25,13 +26,6 @@ const HeaderWrapper = styled.div`
     rgba(255, 255, 247, 1) 100%
   );
   z-index: 1000;
-`
-
-const StyledHeader = styled.header`
-  grid-area: header;
-  padding-top: 20px;
-  align-self: center;
-  text-align: center;
 `
 
 const Logo = styled.img`

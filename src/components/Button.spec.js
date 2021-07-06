@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import Button from './Button'
 
-describe('ButtonExpanded', () => {
+describe('Button', () => {
   it('contains a text', () => {
     render(<Button onClick={() => {}}>Klick mich</Button>)
 
@@ -20,7 +20,7 @@ describe('ButtonExpanded', () => {
     expect(handleClick).toHaveBeenCalled()
   })
 
-  it('changes with the prop isExpanded', () => {
+  it('changes with the prop isActive', () => {
     const { rerender } = render(<Button onClick={jest.fn()}>Klick mich</Button>)
 
     const button = screen.getByRole('button')
@@ -28,11 +28,11 @@ describe('ButtonExpanded', () => {
     const defaultStyle = getComputedStyle(button)
 
     rerender(
-      <Button isExpanded onClick={jest.fn()}>
+      <Button isActive onClick={jest.fn()}>
         Klick mich
       </Button>
     )
-    const expandedStyle = getComputedStyle(button)
-    expect(expandedStyle).not.toBe(defaultStyle)
+    const activeStyle = getComputedStyle(button)
+    expect(activeStyle).not.toBe(defaultStyle)
   })
 })

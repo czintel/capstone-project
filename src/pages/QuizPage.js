@@ -22,6 +22,15 @@ export default function QuizPage() {
       />
       <Header />
 
+      <Welcome>
+        <h3>Jetzt geht es an's Gelernte!</h3>
+        <p>
+          Lies dir die Quizkarten durch und versetze dich so gut du kannst in
+          die Situation hinein! Wenn du die passende Antwort kennst, dann klicke
+          auf sie an.
+        </p>
+      </Welcome>
+
       {isActive
         ? correctAnswers.map(({ title, scenario, question, answers, id }) => (
             <QuizCard
@@ -68,4 +77,13 @@ const FilterButton = styled.img`
   right: 15%;
   top: 30px;
   z-index: 1200;
+`
+const Welcome = styled.section`
+  padding: 30px;
+  margin: 20px 40px;
+  border-radius: 30px;
+  color: var(--text-1);
+  background-color: var(--background-white);
+  background-image: url('https://www.transparenttextures.com/patterns/blizzard.png');
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
 `
