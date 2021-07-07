@@ -27,7 +27,7 @@ export default function QuizPage() {
         <p>
           Lies dir die Quizkarten durch und versetze dich so gut du kannst in
           die Situation hinein! Wenn du die passende Antwort kennst, dann klicke
-          auf sie an.
+          sie an.
         </p>
       </Welcome>
 
