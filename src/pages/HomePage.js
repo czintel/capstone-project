@@ -6,7 +6,7 @@ import LabeledInput from '../components/LabeledInput'
 
 HomePage.propTypes = {
   onSubmit: PropTypes.func,
-  userName: PropTypes.string,
+  userName: PropTypes.array,
 }
 
 export default function HomePage({ onSubmit }) {
